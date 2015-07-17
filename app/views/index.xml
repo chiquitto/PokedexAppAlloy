@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Tab 1">
+    <Window class="container">
         <TableView id="PokemonTable"></TableView>
     </Window>
 </Alloy>
