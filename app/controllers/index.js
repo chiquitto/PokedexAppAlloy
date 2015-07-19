@@ -6,7 +6,7 @@ for (var i = 0; i < 50; i++) {
         id: (i + 1),
         identity: 'Pokemon #' + (i + 1),
     });
-}
+};
 
 var u = require('underscore')._;
 var tableData = u.map(pokemons, function(item, key) {
