@@ -1,14 +1,23 @@
+/**
+ * Pokemon
+ */
 var args = arguments[0] || {};
 
 function doClick(e) {
-    var detalheController = Alloy.createController('PokemonDetalhe').getView();
+    
+    Ti.API.log(JSON.stringify(e));
+    
+    return;
+    
+    var detailController = Alloy.createController('PokemonDetail').getView();
     
     if (OS_IOS || OS_MOBILEWEB) {
-        $.navgroup.open(detalheController);
+        $.navgroup.open(detailController);
     } else {
-        detalheController.open();
+        detailController.open();
     }
-    // Ti.App.fireEvent('pokemonDetalhe:selecionado', args);
+    
+    Ti.App.fireEvent('pokemonDetail:selected', args);
 }
 
 $.rowLabel.setText(args.identity || "Row # Unknown");

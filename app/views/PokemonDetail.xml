@@ -1,0 +1,14 @@
+<Alloy>
+    <Window class="container">
+        <View class="containerInner">
+            <ImageView id="pkPicture" image="/img/poke/001.png" />
+            <Label id="pkName">#001 Bulbasaur</Label>
+            
+            <Label class="h2">Abilities</Label>
+            
+            <Label class="h2">Description</Label>
+            
+            <Label id="pkDescription"></Label>
+        </View>
+    </Window>
+</Alloy>

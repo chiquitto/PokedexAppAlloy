@@ -1,7 +1,7 @@
 var pokemons = [];
 
 // fake data
-for (var i = 0; i < 50; i++) {
+for (var i = 0; i < 9; i++) {
     pokemons.push({
         id: (i + 1),
         identity: 'Pokemon #' + (i + 1),

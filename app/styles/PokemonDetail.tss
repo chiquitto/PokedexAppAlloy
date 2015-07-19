@@ -1,0 +1,21 @@
+
+".containerInner": {
+    left: 10,
+    layout: 'vertical',
+    right: 10,
+    top: 10,
+},
+
+'#pkPicture': {
+    backgroundColor: '#FF0000',
+    height: 100,
+}
+
+"#pkName": {
+    color: "#000",
+    font: {
+        fontSize: 20
+    },
+    textAlign: "left",
+    width: Titanium.UI.FILL
+},
