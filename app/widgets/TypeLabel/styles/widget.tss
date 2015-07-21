@@ -1,18 +1,19 @@
 "View": {
     borderRadius: 5,
     borderWidth: 2,
-    height: Ti.UI.SIZE,
-    width: Ti.UI.SIZE
+    height: Titanium.UI.SIZE,
+    width: Titanium.UI.FILL
 },
 
 "Label": {
     color: "#FFFFFF",
     font: {
-        fontSize: 12
+        fontSize: 13
     },
-    top: 2,
+    textAlign: 'center',
+    top: 4,
     right: 10,
-    bottom: 2,
+    bottom: 4,
     left: 10
 },
 

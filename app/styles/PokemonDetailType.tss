@@ -1,6 +1,30 @@
-
 "#types": {
+    bottom: 10,
     height: Titanium.UI.SIZE,
     layout: 'horizontal',
     width: Titanium.UI.SIZE,
+},
+".typeCell": {
+    height: Titanium.UI.SIZE,
+    width: '32%',
+},
+".typeCell2": {
+    left: '2%',
+}
+
+"#weaknesses": {
+    layout: 'horizontal',
+},
+".weaknessesCell": {
+    bottom: 10,
+    height: Titanium.UI.SIZE,
+    layout: 'vertical',
+    width: '32%',
+},
+".weaknessesCellCenter": {
+    left: '2%',
+    right: '2%',
+},
+".weaknessesCellLabel": {
+    textAlign: 'center',
 },

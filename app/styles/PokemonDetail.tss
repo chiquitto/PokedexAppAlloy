@@ -1,11 +1,4 @@
 
-".containerInner": {
-    left: 10,
-    layout: 'vertical',
-    right: 10,
-    top: 10
-},
-
 "#scrollView": {
     height: Titanium.UI.FILL,
     scrollType: 'vertical',
