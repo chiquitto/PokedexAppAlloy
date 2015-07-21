@@ -1,0 +1,21 @@
+
+"#scrollView": {
+    height: Titanium.UI.FILL,
+    scrollType: 'vertical',
+    showVerticalScrollIndicator: true,
+    showHorizontalScrollIndicator: false,
+    width: Titanium.UI.FILL
+},
+
+'#pkPicture': {
+    height: 100
+},
+
+"#pkName": {
+    color: "#000",
+    font: {
+        fontSize: 20
+    },
+    textAlign: "left",
+    width: Titanium.UI.FILL
+},

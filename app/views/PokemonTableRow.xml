@@ -1,0 +1,6 @@
+<Alloy>
+    <TableViewRow class="rowClass" onClick="doClick">
+        <!--<ImageView id="rowIcon"></ImageView>-->
+        <Label id="rowLabel"></Label>
+    </TableViewRow>
+</Alloy>

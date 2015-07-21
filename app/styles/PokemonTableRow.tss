@@ -1,0 +1,24 @@
+
+".container" : {
+  
+},
+
+".rowClass": {
+    height: '0.3in',
+    layout: 'horizontal',
+},
+
+"#rowLabel": {
+    color: "#000",
+    font: {
+        fontSize: 20
+    },
+    left: '0.1in',
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+    width: Titanium.UI.FILL,
+},
+
+'#rowIcon': {
+    height: Titanium.UI.FILL,
+    width: Titanium.UI.SIZE,
+}

@@ -1,0 +1,7 @@
+<Alloy>
+    <View class="containerInner">
+        <Label class="h2">Stat</Label>
+        
+        <ProgressBar id="pb" />
+    </View>
+</Alloy>

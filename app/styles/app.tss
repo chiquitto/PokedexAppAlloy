@@ -12,15 +12,40 @@ and text fields (depending on platform) in your app unless you
 overrode the settings with other TSS, XML, or JS settings:
 
 'Label[platform=android]': {
-	color: '#000' // all platforms except Android default to black
+color: '#000' // all platforms except Android default to black
 }
 
 'Window': {
-	backgroundColor: '#fff' // white background instead of default transparent
+backgroundColor: '#fff' // white background instead of default transparent
 }
 
 'TextField[platform=android]': {
-	height: Ti.UI.SIZE //
+height: Ti.UI.SIZE //
 }
 
 */
+
+"Label": {
+    color: "#000000",
+},
+
+".container": {
+    backgroundColor: '#FFFF'
+},
+
+".containerInner": {
+    left: 10,
+    layout: 'vertical',
+    right: 10,
+    top: 10
+},
+
+".h2": {
+    bottom: 10,
+    color: "#000",
+    font: {
+        fontSize: 20
+    },
+    textAlign: "left",
+    width: Titanium.UI.FILL
+}
