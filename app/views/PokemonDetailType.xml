@@ -1,0 +1,8 @@
+<Alloy>
+    <View>
+        <View id="types">
+            <Widget typeId="10" src="TypeLabel"/>
+            <Widget typeId="6" src="TypeLabel"/>
+        </View>
+    </View>
+</Alloy>

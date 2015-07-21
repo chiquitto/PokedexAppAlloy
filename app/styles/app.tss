@@ -25,6 +25,10 @@ height: Ti.UI.SIZE //
 
 */
 
+"Label": {
+    color: "#000000",
+},
+
 ".container": {
     backgroundColor: '#FFFF'
 },

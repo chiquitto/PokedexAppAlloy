@@ -3,13 +3,20 @@
     left: 10,
     layout: 'vertical',
     right: 10,
-    top: 10,
+    top: 10
+},
+
+"#scrollView": {
+    height: Titanium.UI.FILL,
+    scrollType: 'vertical',
+    showVerticalScrollIndicator: true,
+    showHorizontalScrollIndicator: false,
+    width: Titanium.UI.FILL
 },
 
 '#pkPicture': {
-    backgroundColor: '#FF0000',
-    height: 100,
-}
+    height: 100
+},
 
 "#pkName": {
     color: "#000",

@@ -1,0 +1,94 @@
+"View": {
+    borderRadius: 5,
+    borderWidth: 2,
+    height: Ti.UI.SIZE,
+    width: Ti.UI.SIZE
+},
+
+"Label": {
+    color: "#FFFFFF",
+    font: {
+        fontSize: 12
+    },
+    top: 2,
+    right: 10,
+    bottom: 2,
+    left: 10
+},
+
+".pkTipo7": {
+    backgroundColor: "#a8b820",
+    borderColor: "#616b13",
+},
+".pkTipo17": {
+    backgroundColor: "#705848",
+    borderColor: "#362a23",
+},
+".pkTipo16": {
+    backgroundColor: "#7038f8",
+    borderColor: "#3d07c0",
+},
+".pkTipo13": {
+    backgroundColor: "#f8d030",
+    borderColor: "#c19b07"
+},
+".pkTipo18": {
+    backgroundColor: "#e898e8",
+    borderColor: "#d547d5",
+},
+".pkTipo2": {
+    backgroundColor: "#c03028",
+    borderColor: "#82211b",
+},
+".pkTipo10": {
+    backgroundColor: "#f08030",
+    borderColor: "#b4530d",
+},
+".pkTipo3": {
+    backgroundColor: "#a890f0",
+    borderColor: "#7762b6",
+},
+".pkTipo8": {
+    backgroundColor: "#705898",
+    borderColor: "#413359",
+},
+".pkTipo12": {
+    backgroundColor: "#78c850",
+    borderColor: "#4a892b",
+},
+".pkTipo5": {
+    backgroundColor: "#e0c068",
+    borderColor: "#aa8623",
+},
+".pkTipo15": {
+    backgroundColor: "#98d8d8",
+    borderColor: "#45b6b6",
+},
+".pkTipo1": {
+    backgroundColor: "#8a8a59",
+    borderColor: "#79794e",
+},
+".pkTipo4": {
+    backgroundColor: "#a040a0",
+    borderColor: "#662966",
+},
+".pkTipo14": {
+    backgroundColor: "#f85888",
+    borderColor: "#d60945",
+},
+".pkTipo6": {
+    backgroundColor: "#b8a038",
+    borderColor: "#746523",
+},
+".pkTipo9": {
+    backgroundColor: "#b8b8d0",
+    borderColor: "#7a7aa7",
+},
+".pkTipo11": {
+    backgroundColor: "#6890f0",
+    borderColor: "#1753e3",
+},
+".pkTipo19": {
+    backgroundColor: "#68a090",
+    borderColor: "#41685d"
+},

@@ -4,11 +4,6 @@
 var args = arguments[0] || {};
 
 function doClick(e) {
-    
-    Ti.API.log(JSON.stringify(e));
-    
-    return;
-    
     var detailController = Alloy.createController('PokemonDetail').getView();
     
     if (OS_IOS || OS_MOBILEWEB) {

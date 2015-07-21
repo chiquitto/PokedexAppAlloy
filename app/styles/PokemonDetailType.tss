@@ -1,0 +1,6 @@
+
+"#types": {
+    height: Titanium.UI.SIZE,
+    layout: 'horizontal',
+    width: Titanium.UI.SIZE,
+},
