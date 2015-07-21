@@ -22,7 +22,9 @@
             </Window>
         </Tab>
         <Tab id="tabStats" title="Stats">
-            <Window class="container">OI</Window>
+            <Window class="container">
+                <Require type="view" id="PokemonDetailStat" src="PokemonDetailStat"/>
+            </Window>
         </Tab>
         <Tab id="tabEvolution" title="Evolution">
             <Window class="container">OI</Window>
