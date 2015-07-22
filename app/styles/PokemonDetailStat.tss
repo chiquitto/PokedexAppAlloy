@@ -1,11 +1,12 @@
-"#pb": {
-    top: 25,
-    width: Titanium.UI.FILL,
-    min: 0,
-    max: 10,
-    value: 5,
-    color: 'blue',
-    message: 'Downloading 0 of 10',
-    font: {fontSize:14, fontWeight:'bold'},
-    style: Titanium.UI.iPhone.ProgressBarStyle.PLAIN
-}
+".stat": {
+	height: Titanium.UI.SIZE,
+	layout: 'horizontal',
+},
+".statBar": {
+	height: Titanium.UI.SIZE,
+	width: Titanium.UI.FILL,
+},
+".statLabel": {
+	height: Titanium.UI.SIZE,
+	width: Titanium.UI.FILL,
+},
