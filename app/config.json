@@ -9,6 +9,7 @@
     "os:windows": {},
     "dependencies": {
         "TypeLabel": "1.0",
-        "com.leorbrenman.tigauge": "1.0"
+        "com.leorbrenman.tigauge": "1.0",
+        "PokemonTableView": "1.0"
     }
 }

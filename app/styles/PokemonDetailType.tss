@@ -10,9 +10,10 @@
 },
 ".typeCell2": {
     left: '2%',
-}
+},
 
 "#weaknesses": {
+	backgroundColor: '#FF0000',
     layout: 'horizontal',
 },
 ".weaknessesCell": {

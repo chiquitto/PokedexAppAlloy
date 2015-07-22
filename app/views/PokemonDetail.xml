@@ -1,36 +1,47 @@
 <Alloy>
-    <TabGroup>
-        <Tab id="tabBasic" title="Basic">
-            <Window class="container">
-                <ScrollView id="scrollView">
-                    <View class="containerInner">
-                        <ImageView id="pkPicture" />
-                        <Label id="pkName">#001 Bulbasaur</Label>
-                        
-                        <Label class="h2">Abilities</Label>
-                        <Label id="pkAbilitie1" />
-                        <Label id="pkAbilitie2" />
-                        <Label class="h2">Description</Label>
-                        <Label id="pkDescription"></Label>
-                    </View>
-                </ScrollView>
-            </Window>
-        </Tab>
-        <Tab id="tabType" title="Type">
-            <Window class="container">
-                <Require type="view" id="PokemonDetailType" src="PokemonDetailType"></Require>
-            </Window>
-        </Tab>
-        <Tab id="tabStats" title="Stats">
-            <Window class="container">
-                <Require type="view" id="PokemonDetailStat" src="PokemonDetailStat"/>
-            </Window>
-        </Tab>
-        <Tab id="tabEvolution" title="Evolution">
-            <Window class="container">OI</Window>
-        </Tab>
-        <Tab id="tabMoves" title="Moves">
-            <Window class="container">OI</Window>
-        </Tab>
-    </TabGroup>
+	<TabGroup>
+		<Tab id="tabBasic" title="Basic">
+			<Window class="container">
+				<ScrollView id="scrollView">
+					<View class="containerInner">
+						<ImageView id="pkPicture" />
+						<Label id="pkName">
+							#001 Bulbasaur
+						</Label>
+						<Label class="h2">
+							Abilities
+						</Label>
+						<Label id="pkAbilitie1" />
+						<Label id="pkAbilitie2" />
+						<Label class="h2">
+							Description
+						</Label>
+						<Label id="pkDescription">
+						</Label>
+					</View>
+				</ScrollView>
+			</Window>
+		</Tab>
+		<Tab id="tabType" title="Type">
+			<Window class="container">
+				<Require type="view" id="PokemonDetailType" src="PokemonDetailType">
+				</Require>
+			</Window>
+		</Tab>
+		<Tab id="tabStats" title="Stats">
+			<Window class="container">
+				<Require type="view" id="PokemonDetailStat" src="PokemonDetailStat"/>
+			</Window>
+		</Tab>
+		<Tab id="tabEvolution" title="Evolution">
+			<Window class="container">
+				<Require type="view" id="PokemonDetailEvolution" src="PokemonDetailEvolution"/>
+			</Window>
+		</Tab>
+		<Tab id="tabMoves" title="Moves">
+			<Window class="container">
+				OI
+			</Window>
+		</Tab>
+	</TabGroup>
 </Alloy>
