@@ -5,11 +5,16 @@
 				<ScrollView id="scrollView">
 					<View class="containerInner">
 						<ImageView id="pkPicture" />
-						<Label id="pkName">#001 Bulbasaur</Label>
+						<Label id="pkName"/>
+						
 						<Label class="h2">Abilities</Label>
-						<Label id="pkAbilitie1" />
-						<Label id="pkAbilitie2" />
+						
+						<View id="pkAbilities">
+							<Label class="pkAbilitie" />
+						</View>
+						
 						<Label class="h2">Description</Label>
+						
 						<Label id="pkDescription"></Label>
 					</View>
 				</ScrollView>

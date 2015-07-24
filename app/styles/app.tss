@@ -41,11 +41,12 @@ height: Ti.UI.SIZE //
 },
 
 ".h2": {
-    bottom: 10,
+    bottom: 5,
     color: "#000000",
     font: {
         fontSize: 20
     },
     textAlign: "left",
+    top: 10,
     width: Titanium.UI.FILL
 }

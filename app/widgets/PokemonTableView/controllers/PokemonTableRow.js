@@ -1,7 +1,7 @@
 /**
  * Pokemon
  */
-var args = arguments[0] || {};
+var pokemon = arguments[0] || {};
 
 function doClick(e) {
     var detailController = Alloy.createController('PokemonDetail').getView();
@@ -12,8 +12,8 @@ function doClick(e) {
         detailController.open();
     }
     
-    Ti.App.fireEvent('pokemonDetail:selected', args);
+    Ti.App.fireEvent('pokemonDetail:selected', pokemon);
 }
 
-$.rowLabel.setText(args.getIdentifier() || "Row # Unknown");
-$.rowIcon.setImage('/img/poke-min/' + args.getId() + '.png');
+$.rowLabel.setText(pokemon.getIdentifier() || "Row # Unknown");
+$.rowIcon.setImage('/img/poke-min/' + pokemon.getId() + '.png');
