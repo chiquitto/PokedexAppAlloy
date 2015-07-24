@@ -13,7 +13,6 @@
 },
 
 "#weaknesses": {
-	backgroundColor: '#FF0000',
     layout: 'horizontal',
 },
 ".weaknessesCell": {

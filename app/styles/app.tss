@@ -30,7 +30,7 @@ height: Ti.UI.SIZE //
 },
 
 ".container": {
-    backgroundColor: '#FFFF'
+    backgroundColor: '#FFFFFF'
 },
 
 ".containerInner": {
@@ -42,7 +42,7 @@ height: Ti.UI.SIZE //
 
 ".h2": {
     bottom: 10,
-    color: "#000",
+    color: "#000000",
     font: {
         fontSize: 20
     },

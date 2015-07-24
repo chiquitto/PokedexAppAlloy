@@ -1,0 +1,12 @@
+<Alloy>
+	<TableViewRow class="rowClass">
+		<Label id="lvLabel"/>
+		<Label id="moveLabel"/>
+		<View id="typeLabel">
+			<Widget typeId="10" src="TypeLabel"/>
+		</View>
+		<Label id="classLabel"/>
+		<Label id="powerLabel"/>
+		<Label id="accLabel"/>
+	</TableViewRow>
+</Alloy>
