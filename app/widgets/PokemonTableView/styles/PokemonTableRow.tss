@@ -1,11 +1,15 @@
 
-".container" : {
-  
+".rowClass": {
+    layout: 'horizontal',
 },
 
-".rowClass": {
-    height: '0.3in',
-    layout: 'horizontal',
+'#rowIcon': {
+	borderColor: '#444444',
+	borderRadius: 25,
+    height: 50,
+    left: 10,
+    top: 5,
+    width: 50,
 },
 
 "#rowLabel": {
@@ -13,12 +17,8 @@
     font: {
         fontSize: 20
     },
-    left: '0.1in',
+    left: 10,
+    right: 10,
     textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
-    width: Titanium.UI.FILL,
+    top: 15,
 },
-
-'#rowIcon': {
-    height: Titanium.UI.FILL,
-    width: Titanium.UI.SIZE,
-}

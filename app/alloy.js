@@ -10,6 +10,8 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+Alloy.Globals.pokedex = require('pokedex').getPokedex();
+
 /**
  * Convert PX to DPI
  *

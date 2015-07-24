@@ -3,15 +3,7 @@ var typeShowByEvolution = 2;
 
 var args = arguments[0] || {};
 
-var pokemons = [];
-
-// fake data
-for (var i = 0; i < 30; i++) {
-    pokemons.push({
-        id: (i + 1),
-        identity: 'Pokemon #' + (i + 1),
-    });
-};
+var pokemons = Alloy.Globals.pokedex.getPokemons();
 
 if (args.typeShow == typeShowByEvolution) {
 	pokemons = pokemons.slice(1, 4);

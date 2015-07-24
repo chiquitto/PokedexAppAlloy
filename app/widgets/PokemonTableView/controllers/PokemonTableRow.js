@@ -15,5 +15,5 @@ function doClick(e) {
     Ti.App.fireEvent('pokemonDetail:selected', args);
 }
 
-$.rowLabel.setText(args.identity || "Row # Unknown");
-//$.rowIcon.setImage(args.image);
+$.rowLabel.setText(args.getIdentifier() || "Row # Unknown");
+$.rowIcon.setImage('/img/poke-min/' + args.getId() + '.png');
