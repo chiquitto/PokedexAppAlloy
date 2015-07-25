@@ -138,6 +138,7 @@ var Util = {
     }
 };
 
+var pokedex = new Pokedex();
 exports.getPokedex = function () {
-    return new Pokedex()
+    return pokedex;
 };

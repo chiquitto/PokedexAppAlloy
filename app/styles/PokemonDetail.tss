@@ -12,10 +12,26 @@
 },
 
 "#pkName": {
+    font: {
+        fontSize: 20
+    },
+    textAlign: "left",
+    width: Titanium.UI.FILL
+},
+
+"#pkAbilities": {
+	height: Titanium.UI.SIZE,
+	layout: 'vertical',
+    width: Titanium.UI.FILL
+},
+
+".pkAbilitie": {
+	backgroundColor: 'red',
     color: "#000",
     font: {
         fontSize: 20
     },
+    height: 20,
     textAlign: "left",
     width: Titanium.UI.FILL
 },

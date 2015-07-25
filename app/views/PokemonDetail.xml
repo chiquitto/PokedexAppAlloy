@@ -10,7 +10,7 @@
 						<Label class="h2">Abilities</Label>
 						
 						<View id="pkAbilities">
-							<Label class="pkAbilitie" />
+							<Label class="pkAbilitie">Chiquitto</Label>
 						</View>
 						
 						<Label class="h2">Description</Label>
