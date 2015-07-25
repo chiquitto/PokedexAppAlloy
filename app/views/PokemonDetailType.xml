@@ -1,0 +1,67 @@
+<Alloy>
+	<ScrollView id="scrollView">
+	    <View class="containerInner">
+	        <View id="types">
+	            <View class="typeCell"><Widget typeId="10" src="TypeLabel"/></View>
+	            <View class="typeCell typeCell2"><Widget typeId="11" src="TypeLabel"/></View>
+	        </View>
+	        
+	        <Label class="h2">Weaknesses</Label>
+	        
+	        <View id="weaknesses">
+	            <View class="weaknessesCell">
+	                <Widget typeId="1" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell weaknessesCellCenter">
+	                <Widget typeId="2" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="3" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="4" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell weaknessesCellCenter">
+	                <Widget typeId="5" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="6" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="7" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell weaknessesCellCenter">
+	                <Widget typeId="8" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="9" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="10" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell weaknessesCellCenter">
+	                <Widget typeId="11" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="12" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	            <View class="weaknessesCell">
+	                <Widget typeId="13" src="TypeLabel"/>
+	                <Label class="weaknessesCellLabel">1x</Label>
+	            </View>
+	        </View>
+	    </View>
+    </ScrollView>
+</Alloy>

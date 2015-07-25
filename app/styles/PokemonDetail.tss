@@ -1,0 +1,37 @@
+
+"#scrollView": {
+    height: Titanium.UI.FILL,
+    scrollType: 'vertical',
+    showVerticalScrollIndicator: true,
+    showHorizontalScrollIndicator: false,
+    width: Titanium.UI.FILL
+},
+
+'#pkPicture': {
+    height: 100
+},
+
+"#pkName": {
+    font: {
+        fontSize: 20
+    },
+    textAlign: "left",
+    width: Titanium.UI.FILL
+},
+
+"#pkAbilities": {
+	height: Titanium.UI.SIZE,
+	layout: 'vertical',
+    width: Titanium.UI.FILL
+},
+
+".pkAbilitie": {
+	backgroundColor: 'red',
+    color: "#000",
+    font: {
+        fontSize: 20
+    },
+    height: 20,
+    textAlign: "left",
+    width: Titanium.UI.FILL
+},

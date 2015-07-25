@@ -1,0 +1,24 @@
+"TableViewRow": {
+	layout: 'horizontal',
+},
+"Label": {
+	color: '#000000'
+},
+"#lvLabel": {
+	width: '12%',
+},
+"#moveLabel": {
+	width: '37%',
+},
+"#typeLabel": {
+	width: '22%',
+},
+"#classLabel": {
+	width: '10%',
+},
+"#powerLabel": {
+	width: '9%',
+},
+"#accLabel": {
+	width: '10%',
+},

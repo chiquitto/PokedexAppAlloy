@@ -1,0 +1,12 @@
+".stat": {
+	height: Titanium.UI.SIZE,
+	layout: 'horizontal',
+},
+".statBar": {
+	height: Titanium.UI.SIZE,
+	width: Titanium.UI.FILL,
+},
+".statLabel": {
+	height: Titanium.UI.SIZE,
+	width: Titanium.UI.FILL,
+},

@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="containerInner">
+		<TableView id="PokemonMoves"></TableView>
+	</View>
+</Alloy>
