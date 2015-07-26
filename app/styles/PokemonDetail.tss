@@ -1,6 +1,5 @@
-
 "#scrollView": {
-    height: Titanium.UI.FILL,
+    height: Titanium.UI.SIZE,
     scrollType: 'vertical',
     showVerticalScrollIndicator: true,
     showHorizontalScrollIndicator: false,
@@ -26,12 +25,6 @@
 },
 
 ".pkAbilitie": {
-	backgroundColor: 'red',
     color: "#000",
-    font: {
-        fontSize: 20
-    },
-    height: 20,
     textAlign: "left",
-    width: Titanium.UI.FILL
 },
