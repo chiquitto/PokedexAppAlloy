@@ -1,11 +1,14 @@
+'View': { backgroundColor:'blue', },
+'Label': { backgroundColor:'red', },
+
 "#types": {
-    bottom: 10,
     height: Titanium.UI.SIZE,
     layout: 'horizontal',
     width: Titanium.UI.SIZE,
 },
 ".typeCell": {
-    height: Titanium.UI.SIZE,
+    // height: Titanium.UI.SIZE,
+    height: 30,
     width: '32%',
 },
 ".typeCell2": {

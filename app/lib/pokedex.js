@@ -8,7 +8,7 @@ var Pokedex = function () {
     };
 
     this.initPokemons = function () {
-        for (var i = 0; i < 9; i++) {
+        for (var i = 0; i < 150; i++) {
             var id = i + 1;
             pokemons.push(new Pokemon(id, 'Pokemon #' + id));
         }
@@ -289,7 +289,7 @@ var Utils = {
 };
 
 var pokedexData = require('pokedex-data');
-console.log(pokedexData);
+// console.log(pokedexData);
 
 var pokedex = new Pokedex();
 
