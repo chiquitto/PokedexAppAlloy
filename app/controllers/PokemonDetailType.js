@@ -18,14 +18,14 @@ function generateTypeCell(typeId, classes) {
 	return view;
 }
 
-function generateWeaknessesCell(type) {
+function generateWeaknessesCell(type, damageFactor, classes) {
 	/*<View class="weaknessesCell">
 	 <Widget typeId="1" src="TypeLabel"/>
 	 <Label class="weaknessesCellLabel">1x</Label>
 	 </View>*/
 
 	var view = $.UI.create("View", {
-		classes : ['weaknessesCell'],
+		classes : ['weaknessesCell'].concat(classes),
 	});
 
 	var widget = Alloy.createWidget('TypeLabel', 'widget', {
@@ -36,7 +36,7 @@ function generateWeaknessesCell(type) {
 
 	var label = $.UI.create("Label", {
 		classes : ['weaknessesCellLabel'],
-		text : '0x',
+		text : damageFactor + 'x',
 	});
 
 	view.add(label);
@@ -62,11 +62,15 @@ function initTypesView() {
 function initWeaknesses() {
 	var efficaciesInDefense = Alloy.Globals.pokedex.calcEfficaciesInDefense(pokemon.getTypes());
 
-	for ( i = 0; i < efficaciesInDefense.length; i++) {
-		$.weaknesses.add(generateWeaknessesCell({
-			type : Alloy.Globals.pokedex.getType(efficaciesInDefense[i].damage_type_id),
-			damage_factor : efficaciesInDefense[i].damage_factor,
-		}));
+	for (i = 0; i < efficaciesInDefense.length; i++) {
+		var type = Alloy.Globals.pokedex.getType(efficaciesInDefense[i].damage_type_id);
+		
+		var classes = [];
+		if ((i % 3) == 1) {
+			classes.push('weaknessesCellCenter');
+		}
+		
+		$.weaknesses.add(generateWeaknessesCell(type, efficaciesInDefense[i].damage_factor, classes));
 	}
 }
 

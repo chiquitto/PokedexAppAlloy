@@ -1,6 +1,3 @@
-'View': { backgroundColor:'blue', },
-'Label': { backgroundColor:'red', },
-
 "#types": {
     height: Titanium.UI.SIZE,
     layout: 'horizontal',
