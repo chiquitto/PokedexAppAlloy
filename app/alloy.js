@@ -12,42 +12,21 @@
 
 Alloy.Globals.pokedex = require('pokedex').getPokedex();
 
-/**
- * Convert PX to DPI
- *
- * @link https://developer.appcelerator.com/question/125317/calculate-apps-density-pixel-width--height-using-titaniumplatformdisplaycapsdpi
- */
-Alloy.Globals.PixelsToDPUnits = function(ThePixels) {
-	return (ThePixels / (Titanium.Platform.displayCaps.dpi / 160));
-};
-
-/**
- * Covert DPI to Pixels
- *
- * @link https://developer.appcelerator.com/question/125317/calculate-apps-density-pixel-width--height-using-titaniumplatformdisplaycapsdpi
- */
-Alloy.Globals.DPUnitsToPixels = function(TheDPUnits) {
-	return (TheDPUnits * (Titanium.Platform.displayCaps.dpi / 160));
-};
-
 function screenWidth() {
-	return Titanium.Platform.displayCaps.platformWidth / Titanium.Platform.displayCaps.dpi;
+	return OS_IOS ? Ti.Platform.displayCaps.platformWidth : Ti.Platform.displayCaps.platformWidth/Ti.Platform.displayCaps.logicalDensityFactor;
 }
 
-//=============================================================================
-// screenHeight - return screen height in inches
-//=============================================================================
-function screenHeight() {
-	return Titanium.Platform.displayCaps.platformHeight / Titanium.Platform.displayCaps.dpi;
-}
+// Alloy.Globals.quintoTela = Alloy.Globals.SCREEN_WIDTH / 5;
+// Alloy.Globals.tercoTela = (Alloy.Globals.SCREEN_WIDTH - 8) / 3;//considera a margem entre os elementos
+// Alloy.Globals.meioTela = (Alloy.Globals.SCREEN_WIDTH - 8) / 2;//considera a margem entre os elementos
 
 /*var pWidth = Ti.Platform.displayCaps.platformWidth;
  var pHeight = Ti.Platform.displayCaps.platformHeight;
  Alloy.Globals.SCREEN_WIDTH = (pWidth > pHeight) ? pHeight : pWidth;
  Alloy.Globals.SCREEN_HEIGHT = (pWidth > pHeight) ? pWidth : pHeight; */
 
-Ti.API.log('screenWidth: ' + screenWidth());
-Ti.API.log('screenHeight: ' + screenHeight());
+Ti.API.log('screenWidth: ' + Alloy.Globals.SCREEN_WIDTH);
+//Ti.API.log('screenHeight: ' + screenHeight());
 
 Ti.API.log('Ti.Platform.displayCaps.density: ' + Ti.Platform.displayCaps.density);
 Ti.API.log('Ti.Platform.displayCaps.dpi: ' + Ti.Platform.displayCaps.dpi);

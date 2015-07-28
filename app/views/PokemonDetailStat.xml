@@ -1,51 +1,41 @@
 <Alloy>
 	<ScrollView id="scrollView">
 		<View class="containerInner">
-			<Label class="h2">
-				Base Stat
-			</Label>
+			<Label class="h2">Base Stat</Label>
+			
+			<View id="stats"></View>
+			
 			<View class="stat">
 				<Widget class="statBar" id="statHp"
 				src="com.leorbrenman.tigauge"
 				percent="50" overlayText="80" titleText="Hp" />
-				<Label class="statLabel">
-					270~364
-				</Label>
+				<Label class="statLabel" id="statHpLabel">270~364</Label>
 			</View>
 			<View class="stat">
-				<Widget id="statAttack" src="com.leorbrenman.tigauge" color="#4ba90a"
-				percent="66" overlayText="80" titleText="Attack" />
-				<Label class="statLabel">
-					270~364
-				</Label>
+				<Widget class="statBar" id="statAttack"
+				src="com.leorbrenman.tigauge"
+				percent="50" overlayText="80" titleText="Attack" />
+				<Label class="statLabel" id="statAttackLabel">270~364</Label>
 			</View>
 			<View class="stat">
 				<Widget id="statDefense" src="com.leorbrenman.tigauge" color="#4ba90a"
 				percent="80" overlayText="80" titleText="Defense" />
-				<Label class="statLabel">
-					270~364
-				</Label>
+				<Label class="statLabel">270~364</Label>
 			</View>
 			<View class="stat">
 				<Widget id="statSpcAttack" src="com.leorbrenman.tigauge" color="#4ba90a"
 				percent="35" overlayText="80" titleText="Special Attack" />
-				<Label class="statLabel">
-					270~364
-				</Label>
+				<Label class="statLabel">270~364</Label>
 			</View>
 			<View class="stat">
 				<Widget id="statSpcDefense" src="com.leorbrenman.tigauge" color="#4ba90a"
 				percent="70" overlayText="80" titleText="Special Defense" />
-				<Label class="statLabel">
-					270~364
-				</Label>
+				<Label class="statLabel">270~364</Label>
 			</View>
 			<View class="stat">
 				<Widget id="statSpeed" src="com.leorbrenman.tigauge" color="#4ba90a"
 				percent="20" overlayText="80" titleText="Speed" />
-				<Label class="statLabel">
-					270~364
-				</Label>
+				<Label class="statLabel">270~364</Label>
 			</View>
 			<View class="stat">
 				<Widget id="statSpeed" src="com.leorbrenman.tigauge" color="#4ba90a"

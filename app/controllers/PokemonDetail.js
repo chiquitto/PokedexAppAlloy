@@ -6,6 +6,7 @@ function init() {
 	initDetail();
 	
 	$.PokemonDetailType.init(args);
+	$.PokemonDetailStat.init(args);
 }
 
 function initDetail() {

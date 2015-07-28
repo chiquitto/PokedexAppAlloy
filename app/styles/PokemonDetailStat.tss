@@ -1,3 +1,6 @@
+"#stats": {
+	layout: 'vertical',
+},
 ".stat": {
 	height: Titanium.UI.SIZE,
 	layout: 'horizontal',

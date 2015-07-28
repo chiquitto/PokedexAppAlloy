@@ -24,6 +24,7 @@
 ".weaknessesCellCenter": {
     left: '2%',
     right: '2%',
+    width: '31%',
 },
 ".weaknessesCellLabel": {
     textAlign: 'center',

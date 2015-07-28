@@ -38,7 +38,6 @@ function generateWeaknessesCell(type, damageFactor, classes) {
 		classes : ['weaknessesCellLabel'],
 		text : damageFactor + 'x',
 	});
-
 	view.add(label);
 
 	return view;
