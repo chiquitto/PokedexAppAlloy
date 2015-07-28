@@ -132,6 +132,7 @@ var Pokemon = function (idArg, identifierArg) {
     this.abilities = null;
     this.baseStats = null;
     this.description = null;
+    this.evolutions = null;
     this.id = null;
     this.identifier = null;
 
@@ -162,6 +163,14 @@ var Pokemon = function (idArg, identifierArg) {
         }
 
         return this.description;
+    };
+
+    this.getEvolutions = function () {
+        if (!this.evolutions) {
+            this.loadEvolutions();
+        }
+
+        return this.evolutions;
     };
 
     this.getId = function () {
@@ -202,6 +211,21 @@ var Pokemon = function (idArg, identifierArg) {
 
     this.loadDescription = function () {
         this.description = this.getIdentifier() + ' - Minions ipsum wiiiii hahaha tank yuuu! Uuuhhh po kass pepete chasy po kass para tú la bodaaa. Chasy bee do bee do bee do belloo! Poulet tikka masala wiiiii potatoooo. Chasy poopayee potatoooo para tú wiiiii uuuhhh pepete daa bee do bee do bee do bananaaaa. Underweaaar pepete para tú jeje aaaaaah aaaaaah potatoooo me want bananaaa! Para tú. Jeje gelatooo tank yuuu! Underweaaar hahaha poulet tikka masala daa. Hana dul sae ti aamoo! Hana dul sae para tú jeje tulaliloo daa.';
+    };
+
+    this.loadEvolutions = function () {
+        this.evolutions = [];
+
+        // Find row by id
+        var tmp = _.findWhere(pokedexData.pokemon_species, {id: this.getId()});
+
+        // Find evolution chain
+        tmp = _.where(pokedexData.pokemon_species, {evolution_chain_id: tmp.evolution_chain_id});
+
+        this.evolutions = _.map(tmp, function (item) {
+            //return new PokemonEvolution(item);
+            return item.id;
+        });
     };
 
     this.loadTypes = function () {
