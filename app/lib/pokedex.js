@@ -1,6 +1,7 @@
 var Pokedex = function() {
 	var abilities = [];
 	var pokemons = [];
+	var types = [];
 
 	this.init = function() {
 		this.initPokemons();
@@ -8,27 +9,45 @@ var Pokedex = function() {
 	};
 
 	this.initPokemons = function() {
-		/*for (var i = 0; i < 150; i++) {
+		/* for (var i = 0; i < 150; i++) {
 			var id = i + 1;
 			pokemons.push(new Pokemon(id, 'Pokemon #' + id));
-		}*/
+		}
+		return; */
 
 		var db = Alloy.Globals.db();
-		var dados = db.execute('SELECT * FROM pokemon');
+		var dados = db.execute('SELECT id, identifier FROM pokemon Order By id Limit 150');
+
+		var identifier;
 		while (dados.isValidRow()) {
-			pokemons.push(new Pokemon(dados.fieldByName('id'), dados.fieldByName('identifier')));
-			//Ti.API.log(JSON.stringify(dados.fieldByName('identifier')));
+			identifier = dados.fieldByName('identifier');
+			identifier = identifier.charAt(0).toUpperCase() + identifier.slice(1);
+
+			pokemons.push(new Pokemon(dados.fieldByName('id'), identifier));
 			dados.next();
 		}
+
 		dados.close();
 		db.close();
 	};
 
 	this.initTypes = function() {
-		for ( i = 0; i < pokedexData.types.length; i++) {
+		/* for ( i = 0; i < pokedexData.types.length; i++) {
 			pokedexData.types[i] = new Type(pokedexData.types[i]);
+		} */
+		
+		var db = Alloy.Globals.db();
+		var dados = db.execute('SELECT id, identifier FROM types');
+
+		var identifier;
+		while (dados.isValidRow()) {
+			types.push(new Type(dados.fieldByName('id'), dados.fieldByName('identifier')));
+			dados.next();
 		}
 
+		dados.close();
+		db.close();
+		
 		_.map(pokedexData.type_efficacy, function(item) {
 			item.damage_factor = item.damage_factor / 100;
 		});
@@ -102,7 +121,7 @@ var Pokedex = function() {
 	};
 
 	this.getType = function(id) {
-		return _.find(pokedexData.types, function(item) {
+		return _.find(types, function(item) {
 			return item.id == id;
 		});
 	};
@@ -246,9 +265,22 @@ var Pokemon = function(idArg, identifierArg) {
 	this.loadTypes = function() {
 		var i2;
 		this.types = [];
-		for (var i = 0; i < 2; i++) {
+
+		/* for (var i = 0; i < 2; i++) {
 			this.types.push(pokedex.getType(Utils.mt_rand(1, 18)));
+		} */
+
+		var db = Alloy.Globals.db();
+		var dados = db.execute('Select type_id From pokemon_types Where (pokemon_id = ?) Order By slot', this.getId());
+
+		var identifier;
+		while (dados.isValidRow()) {
+			this.types.push(pokedex.getType(dados.fieldByName('type_id')));
+			dados.next();
 		}
+
+		dados.close();
+		db.close();
 	};
 
 	this.init();
@@ -415,7 +447,7 @@ var Stats = function() {
 	this.init();
 };
 
-var Type = function(type) {
+var Type = function(idArg, identifierArg) {
 	this.id = null;
 	this.identifier = null;
 	this.identifierAbbr = null;
@@ -426,9 +458,9 @@ var Type = function(type) {
 	var typeIsto = this;
 
 	this.init = function() {
-		this.id = type.id;
-		this.identifier = type.identifier;
-		this.identifierAbbr = type.identifierAbbr;
+		this.id = idArg;
+		this.identifier = identifierArg;
+		// this.identifierAbbr = type.identifierAbbr;
 	};
 
 	this.calcEfficacyInDefense = function() {
@@ -502,34 +534,16 @@ var Type = function(type) {
 
 	this.init();
 }
-var Utils = {
-	mt_rand : function(min, max) {
-		//  discuss at: http://phpjs.org/functions/mt_rand/
-		// original by: Onno Marsman
-		// improved by: Brett Zamir (http://brett-zamir.me)
-		//    input by: Kongo
-		//   example 1: mt_rand(1, 1);
-		//   returns 1: 1
 
-		var argc = arguments.length;
-		if (argc === 0) {
-			min = 0;
-			max = 2147483647;
-		} else if (argc === 1) {
-			throw new Error('Warning: mt_rand() expects exactly 2 parameters, 1 given');
-		} else {
-			min = parseInt(min, 10);
-			max = parseInt(max, 10);
-		}
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-};
-
+var Utils = Alloy.Globals.utils;
 var pokedexData = require('pokedex-data');
 // console.log(pokedexData);
 
-var pokedex = new Pokedex();
+var pokedex;
 
 exports.getPokedex = function() {
+	if (!pokedex) {
+		pokedex = new Pokedex();
+	}
 	return pokedex;
 }; 

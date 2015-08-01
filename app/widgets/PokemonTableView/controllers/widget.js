@@ -16,8 +16,8 @@ if (args.typeShow == typeShowByEvolution) {
 	pokemons = Alloy.Globals.pokedex.getPokemons();
 }
 
-var u = require('underscore')._;
-var tableData = u.map(pokemons, function(item, key) {
+// var u = require('underscore')._;
+var tableData = _.map(pokemons, function(item, key) {
 	var row = Widget.createController('PokemonTableRow', item);
 	return row.getView();
 });

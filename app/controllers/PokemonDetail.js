@@ -11,11 +11,11 @@ function init() {
 }
 
 function initDetail() {
-	var number = '00' + pokemon.getId();
-	number = number.substring(number.length - 3);
-	$.pkPicture.setImage('/img/poke/' + number + '.png');
-
-	$.pkName.setText('#' + pokemon.getId() + ' ' + pokemon.getIdentifier());
+	//var number = '00' + pokemon.getId();
+	//number = number.substring(number.length - 3);
+	
+	$.pkPicture.setImage('/img/poke/' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + '.png');
+	$.pkName.setText('#' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + ' ' + pokemon.getIdentifier());
 
 	var abilities = pokemon.getAbilities();
 	var i;

@@ -10,14 +10,35 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+function installDatabase() {
+	// https://developer.appcelerator.com/question/126143/force-reinstall-of-sqlite-database
+	// https://developer.appcelerator.com/question/78951/update-database-and-table-content
+
+	var f;
+	if (Ti.Platform.osname == 'android') {
+		f = Ti.Filesystem.getFile('file:///data/data', Ti.App.getID(), 'database', 'pokemon');
+	} else {
+		f = Ti.Filesystem.getFile(Ti.Filesystem.applicationSupportDirectory, 'database', 'pokemon.sql');
+	}
+	if (f.exists()) {
+		f.deleteFile();
+	}
+
+	// Install fresh database
+	Ti.Database.install('/pokemon.sqlite', 'pokemon');
+}
+
+installDatabase();
+
 Alloy.Globals.db = function() {
-	return Ti.Database.install('/pokemon.sqlite', 'pokemon.sqlite');
+	return Ti.Database.open('pokemon');
 };
 
+Alloy.Globals.utils = require('utils');
 Alloy.Globals.pokedex = require('pokedex').getPokedex();
 
 function screenWidth() {
-	return OS_IOS ? Ti.Platform.displayCaps.platformWidth : Ti.Platform.displayCaps.platformWidth/Ti.Platform.displayCaps.logicalDensityFactor;
+	return OS_IOS ? Ti.Platform.displayCaps.platformWidth : Ti.Platform.displayCaps.platformWidth / Ti.Platform.displayCaps.logicalDensityFactor;
 };
 
 // Alloy.Globals.quintoTela = Alloy.Globals.SCREEN_WIDTH / 5;
