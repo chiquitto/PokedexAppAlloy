@@ -9,3 +9,4 @@ tmp
 .settings
 Thumbs.db
 /test/lib-app
+/test/bower_components

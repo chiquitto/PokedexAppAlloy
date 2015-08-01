@@ -1,0 +1,19 @@
+{
+  "name": "PokedexAppTitaniumTest",
+  "version": "0.0.0",
+  "homepage": "https://github.com/chiquitto/PokedexAppAlloy",
+  "authors": [
+    "Alisson Chiquitto <chiquitto@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3"
+  }
+}
