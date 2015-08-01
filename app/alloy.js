@@ -10,11 +10,15 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+Alloy.Globals.db = function() {
+	return Ti.Database.install('/pokemon.sqlite', 'pokemon.sqlite');
+};
+
 Alloy.Globals.pokedex = require('pokedex').getPokedex();
 
 function screenWidth() {
 	return OS_IOS ? Ti.Platform.displayCaps.platformWidth : Ti.Platform.displayCaps.platformWidth/Ti.Platform.displayCaps.logicalDensityFactor;
-}
+};
 
 // Alloy.Globals.quintoTela = Alloy.Globals.SCREEN_WIDTH / 5;
 // Alloy.Globals.tercoTela = (Alloy.Globals.SCREEN_WIDTH - 8) / 3;//considera a margem entre os elementos

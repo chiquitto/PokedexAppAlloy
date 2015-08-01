@@ -6,7 +6,7 @@
 			<Widget typeId="10" src="TypeLabel"/>
 		</View>
 		<Label id="classLabel"/>
+		<Label id="accLabel">100</Label>
 		<Label id="powerLabel"/>
-		<Label id="accLabel"/>
 	</TableViewRow>
 </Alloy>

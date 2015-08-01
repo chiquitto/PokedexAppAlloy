@@ -1,8 +1,8 @@
 var args = arguments[0] || {};
 
-$.lvLabel.setText('TM00' || "Row # Unknown");
-$.moveLabel.setText('Move #000' || "Row # Unknown");
-// $.typeLabel.setText('type' || "Row # Unknown");
-$.classLabel.setText('class' || "Row # Unknown");
-$.powerLabel.setText('150' || "Row # Unknown");
-$.accLabel.setText('100%' || "Row # Unknown");
+$.lvLabel.setText('TM00');
+$.moveLabel.setText('Move #000');
+// $.typeLabel.setText('type');
+$.classLabel.setText('cls');
+$.powerLabel.setText('150');
+// $.accLabel.setText('100%');

@@ -8,7 +8,7 @@
 	width: '12%',
 },
 "#moveLabel": {
-	width: '37%',
+	width: '27%',
 },
 "#typeLabel": {
 	width: '22%',
@@ -20,5 +20,6 @@
 	width: '9%',
 },
 "#accLabel": {
-	width: '10%',
+	backgroundColor: 'red',
+	width: '20%',
 },
