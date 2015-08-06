@@ -1,3 +1,7 @@
+/**
+ * @link https://github.com/vuinguyen/Ti-Navigation-Controller/blob/master/Resources/NavigationController.js
+ */
+
 NavigationController = function() {
 	this.windowStack = [];
 };
