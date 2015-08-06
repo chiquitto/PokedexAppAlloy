@@ -1,12 +1,14 @@
 <Alloy>
-	<TableViewRow class="rowClass">
+	<TableViewRow className="move" class="rowClass">
 		<Label id="lvLabel"/>
 		<Label id="moveLabel"/>
-		<View id="typeLabel">
-			<Widget typeId="10" src="TypeLabel"/>
+		<View id="typeLabel"/>
+		<View id="classLabel">
+			<View id="classLabelContainer">
+				<ImageView id="classPicture" />
+			</View>
 		</View>
-		<Label id="classLabel"/>
-		<Label id="accLabel">100</Label>
 		<Label id="powerLabel"/>
+		<Label id="accLabel"/>
 	</TableViewRow>
 </Alloy>

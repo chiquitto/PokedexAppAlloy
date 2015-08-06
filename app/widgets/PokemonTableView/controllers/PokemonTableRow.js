@@ -1,9 +1,12 @@
 /**
  * Pokemon
  */
-var pokemon = arguments[0] || {};
+var args = arguments[0] || {};
+var pokemon = args.pokemon;
 
 function doClick(e) {
+	//Ti.API.log(JSON.stringify($));
+	
 	var detailController = Alloy.createController('PokemonDetail', {
 		pokeId : pokemon.getId(),
 	}).getView();
@@ -15,6 +18,7 @@ function doClick(e) {
 	}
 
 	//Ti.App.fireEvent('pokemonDetail:selected', pokemon);
+	//Ti.API.log(JSON.stringify($));
 }
 
 $.rowLabel.setText('#' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + ' ' + pokemon.getIdentifier());

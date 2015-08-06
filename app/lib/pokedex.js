@@ -6,6 +6,35 @@ var Pokedex = function() {
 	this.init = function() {
 		this.initPokemons();
 		this.initTypes();
+		this.initAbilities();
+	};
+
+	this.initAbilities = function() {
+		// var sql = 'SELECT ability_id, name From ability_names Where (local_language_id = ?)';
+		
+		var sql = 'SELECT '
+		+ '	an.ability_id, an.name, af.flavor_text '
+		+ 'From ability_names an '
+		+ 'Inner Join ability_flavor_text af '
+		+ '	On '
+		+ '	(af.ability_id = an.ability_id) '
+		+ '	And (af.version_group_id = ?) '
+		+ '	And (af.language_id = an.local_language_id) '
+		+ 'Where (an.local_language_id = ?)';
+
+		var db = Alloy.Globals.db();
+		var dados = db.execute(sql, Alloy.Globals.PokedexConfig.version_id, Alloy.Globals.PokedexConfig.language_id);
+
+		while (dados.isValidRow()) {
+			var abilitie = new Abilitie(dados.fieldByName('ability_id'), dados.fieldByName('name'));
+			abilitie.setDescription(dados.fieldByName('flavor_text'));
+			
+			abilities.push(abilitie);
+			dados.next();
+		}
+
+		dados.close();
+		db.close();
 	};
 
 	this.initPokemons = function() {
@@ -20,8 +49,8 @@ var Pokedex = function() {
 
 		var identifier;
 		while (dados.isValidRow()) {
-			identifier = dados.fieldByName('identifier');
-			identifier = identifier.charAt(0).toUpperCase() + identifier.slice(1);
+			identifier = Utils.ucfirst(dados.fieldByName('identifier'));
+			// identifier = identifier.charAt(0).toUpperCase() + identifier.slice(1);
 
 			pokemons.push(new Pokemon(dados.fieldByName('id'), identifier));
 			dados.next();
@@ -37,7 +66,7 @@ var Pokedex = function() {
 		} */
 		
 		var db = Alloy.Globals.db();
-		var dados = db.execute('SELECT id, identifier FROM types');
+		var dados = db.execute('SELECT id, identifier FROM types Order By identifier');
 
 		var identifier;
 		while (dados.isValidRow()) {
@@ -103,11 +132,9 @@ var Pokedex = function() {
 	};
 
 	this.getAbilitie = function(id) {
-		if (!abilities[id]) {
-			abilities[id] = new Abilitie(id, 'Abilitie ' + id);
-			abilities[id].setDescription('Minions ' + id + 'ipsum wiiiii hahaha tank yuuu! Uuuhhh po kass pepete chasy po kass para tú la bodaaa.');
-		}
-		return abilities[id];
+		return _.find(abilities, function(item) {
+			return item.id == id;
+		});
 	};
 
 	this.getPokemon = function(id) {
@@ -157,6 +184,7 @@ var Abilitie = function(idArg, identifierArg) {
 
 	this.init();
 }
+
 var Pokemon = function(idArg, identifierArg) {
 	this.abilities = null;
 	this.baseStats = null;
@@ -164,6 +192,7 @@ var Pokemon = function(idArg, identifierArg) {
 	this.evolutions = null;
 	this.id = null;
 	this.identifier = null;
+	this.moves = null;
 
 	this.init = function() {
 		this.id = idArg;
@@ -210,6 +239,13 @@ var Pokemon = function(idArg, identifierArg) {
 		return this.identifier;
 	};
 
+	this.getMoves = function() {
+		if (!this.moves) {
+			this.loadMoves();
+		}
+		return this.moves;
+	};
+
 	this.getTypes = function() {
 		if (!this.types) {
 			this.loadTypes();
@@ -220,27 +256,85 @@ var Pokemon = function(idArg, identifierArg) {
 
 	this.loadAbilities = function() {
 		this.abilities = [];
-		var i,
-		    max;
 
-		max = Utils.mt_rand(1, 2);
+		/* max = Utils.mt_rand(1, 2);
 		for ( i = 0; i < max; i++) {
 			this.abilities.push(pokedex.getAbilitie(Utils.mt_rand(1, 50)));
+		} */
+
+		var sql = 'SELECT ability_id From pokemon_abilities Where (pokemon_id = ?) Order By slot';
+
+		var db = Alloy.Globals.db();
+		var dados = db.execute(sql, this.getId());
+
+		while (dados.isValidRow()) {
+			this.abilities.push(pokedex.getAbilitie(dados.fieldByName('ability_id')));
+			dados.next();
 		}
+
+		dados.close();
+		db.close();
 	};
 
 	this.loadBaseStats = function() {
-		this.baseStats = new Stats();
+		/* this.baseStats = new Stats();
 		this.baseStats.setHp(new StatBaseHp(Utils.mt_rand(1, 51) * 5));
 		this.baseStats.setAttack(new StatBaseAttack(Utils.mt_rand(1, 38) * 5));
 		this.baseStats.setDefense(new StatBaseDefense(Utils.mt_rand(1, 38) * 5));
 		this.baseStats.setSpcAttack(new StatBaseSpcAttack(Utils.mt_rand(1, 38) * 5));
 		this.baseStats.setSpcDefense(new StatBaseSpcDefense(Utils.mt_rand(1, 38) * 5));
-		this.baseStats.setSpeed(new StatBaseSpeed(Utils.mt_rand(1, 38) * 5));
+		this.baseStats.setSpeed(new StatBaseSpeed(Utils.mt_rand(1, 38) * 5)); */
+
+		var sql = 'SELECT stat_id, base_stat FROM pokemon_stats Where (pokemon_id = ?)';
+
+		var db = Alloy.Globals.db();
+		var dados = db.execute(sql, this.getId());
+
+		this.baseStats = new Stats();
+		while (dados.isValidRow()) {
+			switch(dados.fieldByName('stat_id')) {
+				case 1:
+					this.baseStats.setHp(new StatBaseHp(dados.fieldByName('base_stat')));
+					break;
+				case 2:
+					this.baseStats.setAttack(new StatBaseAttack(dados.fieldByName('base_stat')));
+					break;
+				case 3:
+					this.baseStats.setDefense(new StatBaseDefense(dados.fieldByName('base_stat')));
+					break;
+				case 4:
+					this.baseStats.setSpcAttack(new StatBaseSpcAttack(dados.fieldByName('base_stat')));
+					break;
+				case 5:
+					this.baseStats.setSpcDefense(new StatBaseSpcDefense(dados.fieldByName('base_stat')));
+					break;
+				case 6:
+					this.baseStats.setSpeed(new StatBaseSpeed(dados.fieldByName('base_stat')));
+					break;
+			}
+			dados.next();
+		}
+
+		dados.close();
+		db.close();
 	};
 
 	this.loadDescription = function() {
-		this.description = this.getIdentifier() + ' - Minions ipsum wiiiii hahaha tank yuuu! Uuuhhh po kass pepete chasy po kass para tú la bodaaa. Chasy bee do bee do bee do belloo! Poulet tikka masala wiiiii potatoooo. Chasy poopayee potatoooo para tú wiiiii uuuhhh pepete daa bee do bee do bee do bananaaaa. Underweaaar pepete para tú jeje aaaaaah aaaaaah potatoooo me want bananaaa! Para tú. Jeje gelatooo tank yuuu! Underweaaar hahaha poulet tikka masala daa. Hana dul sae ti aamoo! Hana dul sae para tú jeje tulaliloo daa.';
+		// this.description = this.getIdentifier() + ' - Minions ipsum wiiiii hahaha tank yuuu! Uuuhhh po kass pepete chasy po kass para tú la bodaaa. Chasy bee do bee do bee do belloo! Poulet tikka masala wiiiii potatoooo. Chasy poopayee potatoooo para tú wiiiii uuuhhh pepete daa bee do bee do bee do bananaaaa. Underweaaar pepete para tú jeje aaaaaah aaaaaah potatoooo me want bananaaa! Para tú. Jeje gelatooo tank yuuu! Underweaaar hahaha poulet tikka masala daa. Hana dul sae ti aamoo! Hana dul sae para tú jeje tulaliloo daa.';
+
+		var sql = 'SELECT flavor_text FROM pokemon_species_flavor_text Where (species_id = ?) And (language_id = ?) Order By version_id Desc';
+
+		var db = Alloy.Globals.db();
+		var dados = db.execute(sql, this.getId(), Alloy.Globals.PokedexConfig.language_id);
+
+		this.description = 'No description found';
+		while (dados.isValidRow()) {
+			this.description = dados.fieldByName('flavor_text').replace(/\n/g, ' ');
+			break;
+		}
+
+		dados.close();
+		db.close();
 	};
 
 	this.loadEvolutions = function() {
@@ -260,6 +354,48 @@ var Pokemon = function(idArg, identifierArg) {
 			//return new PokemonEvolution(item);
 			return item.id;
 		});
+	};
+
+	this.loadMoves = function() {
+		var sql = 'Select '
+		+ 'pm.move_id, pm.pokemon_move_method_id, pm.level, '
+		+ 'm.identifier, m.type_id, m.power, m.accuracy, m.damage_class_id, '
+		+ 'mac.item_id, ina.name item_name '
+		+ 'From pokemon_moves pm '
+		+ 'Inner Join moves m '
+		+ '  On (m.id = pm.move_id) '
+		+ 'Left Join machines mac '
+		+ '  On (pm.pokemon_move_method_id = 4) And (mac.version_group_id = pm.version_group_id) And (mac.move_id = pm.move_id) '
+		+ 'Left Join item_names ina '
+		+ '  On (ina.item_id = mac.item_id) And (ina.local_language_id = ?) '
+		+ 'Where '
+		+ '  (pm.pokemon_id = ?) '
+		+ '  And (pokemon_move_method_id In (1,2,3,4)) '
+		+ '  And (pm.version_group_id = ?) '
+		+ 'Order By pm.pokemon_move_method_id, pm.level, mac.machine_number';
+
+		var db = Alloy.Globals.db();
+		var dados = db.execute(sql, Alloy.Globals.PokedexConfig.language_id, this.getId(), Alloy.Globals.PokedexConfig.version_id);
+
+		this.moves = [];
+		while (dados.isValidRow()) {
+			this.moves.push({
+				move_id: dados.fieldByName('move_id'),
+				pokemon_move_method_id: dados.fieldByName('pokemon_move_method_id'),
+				level: dados.fieldByName('level'),
+				identifier: Alloy.Globals.utils.ucfirst(dados.fieldByName('identifier')),
+				type_id: dados.fieldByName('type_id'),
+				power: dados.fieldByName('power'),
+				accuracy: dados.fieldByName('accuracy'),
+				damage_class_id: dados.fieldByName('damage_class_id'),
+				item_id: dados.fieldByName('item_id'),
+				item_name: dados.fieldByName('item_name'),
+			});
+			dados.next();
+		}
+
+		dados.close();
+		db.close();
 	};
 
 	this.loadTypes = function() {
@@ -533,11 +669,10 @@ var Type = function(idArg, identifierArg) {
 	};
 
 	this.init();
-}
+};
 
 var Utils = Alloy.Globals.utils;
 var pokedexData = require('pokedex-data');
-// console.log(pokedexData);
 
 var pokedex;
 

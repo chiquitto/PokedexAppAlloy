@@ -1,3 +1,33 @@
+"#PokemonMovesHeader": {
+	height: Titanium.UI.SIZE,
+	layout: 'horizontal',
+},
+'Label': {
+	color: '#000000',
+	font: {
+		fontSize: 12,
+	},
+},
+"#lvLabel": {
+	width: '12%',
+},
+"#moveLabel": {
+	width: '37%',
+},
+"#typeLabel": {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	width: '22%',
+},
+"#classLabel": {
+	width: '10%',
+},
+"#powerLabel": {
+	width: '9%',
+},
+"#accLabel": {
+	width: '9%',
+},
+
 "TableView": {
 	
 },

@@ -10,17 +10,23 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+Alloy.Globals.PokedexConfig = {};
+Alloy.Globals.PokedexConfig.language_id = 9;
+Alloy.Globals.PokedexConfig.version_id = 15;
+
 function installDatabase() {
 	// https://developer.appcelerator.com/question/126143/force-reinstall-of-sqlite-database
 	// https://developer.appcelerator.com/question/78951/update-database-and-table-content
 
 	var f;
 	if (Ti.Platform.osname == 'android') {
-		f = Ti.Filesystem.getFile('file:///data/data', Ti.App.getID(), 'database', 'pokemon');
+		f = Ti.Filesystem.getFile('file:///data/data', Ti.App.getID(), 'databases', 'pokemon');
 	} else {
 		f = Ti.Filesystem.getFile(Ti.Filesystem.applicationSupportDirectory, 'database', 'pokemon.sql');
 	}
+	
 	if (f.exists()) {
+		Ti.API.log('Apagar BD');
 		f.deleteFile();
 	}
 

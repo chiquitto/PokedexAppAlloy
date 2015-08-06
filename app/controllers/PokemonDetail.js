@@ -4,18 +4,19 @@ var pokemon = Alloy.Globals.pokedex.getPokemon(args.pokeId);
 
 function init() {
 	initDetail();
-	
+
 	$.PokemonDetailType.init(args);
 	$.PokemonDetailStat.init(args);
 	$.PokemonDetailEvolution.init(args);
+	$.PokemonDetailMoves.init(args);
 }
 
 function initDetail() {
-	//var number = '00' + pokemon.getId();
-	//number = number.substring(number.length - 3);
-	
+	var title = '#' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + ' ' + pokemon.getIdentifier();
+
 	$.pkPicture.setImage('/img/poke/' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + '.png');
-	$.pkName.setText('#' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + ' ' + pokemon.getIdentifier());
+	$.pkName.setText(title);
+	$.PokemonDetail.setTitle(title);
 
 	var abilities = pokemon.getAbilities();
 	var i;
@@ -23,7 +24,7 @@ function initDetail() {
 	for (i in abilities) {
 		var label = $.UI.create("Label", {
 			classes : ['pkAbilitie'],
-			html : '<strong>' + abilities[i].getIdentifier() + '</strong> ' + abilities[i].getDescription(),
+			html : '<strong>' + abilities[i].getIdentifier() + '</strong>: ' + abilities[i].getDescription(),
 		});
 		$.pkAbilities.add(label);
 	}
@@ -33,7 +34,10 @@ function initDetail() {
 
 init();
 
-/* Ti.App.addEventListener('pokemonDetail:selected', function(v) {
- pokemon = v;
 
- }); */
+
+/*
+Ti.App.addEventListener('pokemonDetail:selected', function(v) {
+  pokemon = v;
+});
+ */

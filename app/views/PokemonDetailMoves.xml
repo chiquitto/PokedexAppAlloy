@@ -1,5 +1,13 @@
 <Alloy>
 	<View class="containerInner">
+		<View id="PokemonMovesHeader">
+			<Label id="lvLabel">Level</Label>
+			<Label id="moveLabel">Move</Label>
+			<Label id="typeLabel">Type</Label>
+			<Label id="classLabel">Cat.</Label>
+			<Label id="powerLabel">Pwr.</Label>
+			<Label id="accLabel">Acc.</Label>
+		</View>>
 		<TableView id="PokemonMoves"></TableView>
 	</View>
 </Alloy>

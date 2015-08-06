@@ -1,6 +1,10 @@
 Alloy = {};
 Alloy.Globals = {};
 
+Alloy.Globals.PokedexConfig = {};
+Alloy.Globals.PokedexConfig.language_id = 9;
+Alloy.Globals.PokedexConfig.version_id = 15;
+
 Alloy.Globals.utils = require('utils');
 
 var pokemonSqlite = null;

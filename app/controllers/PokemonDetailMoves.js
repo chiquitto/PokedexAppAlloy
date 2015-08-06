@@ -1,15 +1,13 @@
 var args = arguments[0] || {};
 
-var itens = [];
+var pokemon;
+exports.init = function(args) {
+	pokemon = Alloy.Globals.pokedex.getPokemon(args.pokeId);
 
-for (var i = 0; i < 25; i++) {
-	var item = {
-		id : i,
-		title : 'Move ' + i
-	};
-	
-	var row = Alloy.createController('PokemonDetailMovesRow', item).getView();
-	itens.push(row);
-}
+	var data = _.map(pokemon.getMoves(), function(item) {
+		return Alloy.createController('PokemonDetailMovesRow', item).getView();
+	});
 
-$.PokemonMoves.setData(itens);
+	// Load moves :D
+	$.PokemonMoves.setData(data);
+};

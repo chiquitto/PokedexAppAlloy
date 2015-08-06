@@ -18,7 +18,9 @@ if (args.typeShow == typeShowByEvolution) {
 
 // var u = require('underscore')._;
 var tableData = _.map(pokemons, function(item, key) {
-	var row = Widget.createController('PokemonTableRow', item);
+	var row = Widget.createController('PokemonTableRow', {
+		pokemon: item,
+	});
 	return row.getView();
 });
 

@@ -33,7 +33,6 @@ function initStatsView() {
 	var stats = ['hp', 'attack', 'defense', 'spcAttack', 'spcDefense', 'speed'];
 
 	var pokemonStats = pokemon.getBaseStats();
-	Ti.API.log(JSON.stringify(pokemonStats));
 
 	for (var i in stats) {
 		var stat = pokemonStats.getStat(stats[i]);

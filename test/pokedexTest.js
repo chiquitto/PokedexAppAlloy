@@ -1,16 +1,20 @@
 Alloy.Globals.db();
 
+var pokemon;
+
 function init() {
     var i;
 
     var pokedex = exports.getPokedex();
 
-    var pokemon = pokedex.getPokemon(9);
+    pokemon = pokedex.getPokemon(9);
     console.log(pokemon);
+
+    console.log('description: ', pokemon.getDescription());
 
     var types = pokemon.getTypes();
 
-    console.log('types');
+    console.log('types:');
     for (i = 0; i < types.length; i++) {
         console.log({
             id: types[i].id,
@@ -21,16 +25,30 @@ function init() {
         // console.log(types[i].getImmunities());
     }
 
-    var efficaciesInDefense = pokedex.calcEfficaciesInDefense(types);
-    console.log('efficaciesInDefense');
-    for (i = 0; i < efficaciesInDefense.length; i++) {
-        var type = pokedex.getType(efficaciesInDefense[i].damage_type_id);
+    var abilities = pokemon.getAbilities();
+
+    console.log('pokemon abilities:');
+    for (i = 0; i < abilities.length; i++) {
         console.log({
-            identifier: type.identifier,
-            damage_factor: efficaciesInDefense[i].damage_factor,
+            id: abilities[i].id,
+            identifier: abilities[i].identifier,
         });
     }
 
+    if (1) {
+        var efficaciesInDefense = pokedex.calcEfficaciesInDefense(types);
+        console.log('efficaciesInDefense');
+        for (i = 0; i < efficaciesInDefense.length; i++) {
+            var type = pokedex.getType(efficaciesInDefense[i].damage_type_id);
+            console.log({
+                identifier: type.identifier,
+                damage_factor: efficaciesInDefense[i].damage_factor,
+            });
+        }
+    }
+
+    // console.log('abilitie: ', pokedex.getAbilitie(10));
+
 }
 
-setTimeout(init, 1000);
+setTimeout(init, 500);

@@ -1,0 +1,728 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fi",
+				"fieldByName"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"col",
+				"columnsInv"
+			],
+			[
+				"poke",
+				"Pokedex"
+			],
+			[
+				"sql",
+				"sqlite"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"font",
+				"font"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"pokemon",
+				"pokemon_species"
+			],
+			[
+				"com",
+				"comer"
+			],
+			[
+				"de",
+				"depositar"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"con",
+				"consulta"
+			],
+			[
+				"end",
+				"endereco"
+			],
+			[
+				"prod",
+				"produtos"
+			],
+			[
+				"re",
+				"registros"
+			],
+			[
+				"s",
+				"sxe"
+			],
+			[
+				"cli",
+				"cliente"
+			],
+			[
+				"c",
+				"cliente"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"cl",
+				"cliente"
+			],
+			[
+				"ca",
+				"carregar"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"carre",
+				"carregarFail"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"id",
+				"idcliente"
+			],
+			[
+				"mysqli_",
+				"mysql_insert_id"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"rep",
+				"repeat-x"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"he",
+				"head	Tag"
+			],
+			[
+				"u",
+				"ufSelecionado"
+			],
+			[
+				"ufs",
+				"ufsCapital"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"aluno",
+				"aluno1"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"sal",
+				"saldo2"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"li",
+				"limite"
+			],
+			[
+				"th",
+				"this"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "{\n\"__widgetId\":\"PokemonTableView\",\n\"__iamalloy\":true,\n\"__views\":\n	{\"PokemonTableRow\":{\n		\"bubbleParent\":true,\n		\"rect\":{\"height\":0,\"y\":0,\"x\":0,\"width\":0},\n		\"keepScreenOn\":false,\n		\"size\":{\"height\":0,\"y\":0,\"width\":0,\"x\":0},\n		\"visible\":true,\n		\"enabled\":true,\n		\"apiName\":\"Ti.UI.TableViewRow\",\n		\"className\":\"pokemon\",\n		\"backgroundRepeat\":false,\n		\"layout\":\"horizontal\",\"children\":[{\"width\":50,\"animating\":false,\"height\":50,\"bubbleParent\":true,\"rect\":{\"height\":50,\"y\":5,\"x\":10,\"width\":50},\"left\":10,\"borderColor\":\"#444444\",\"paused\":false,\"keepScreenOn\":false,\"top\":5,\"size\":{\"height\":50,\"y\":0,\"width\":50,\"x\":0},\"visible\":true,\"enabled\":true,\"borderRadius\":25,\"apiName\":\"Ti.UI.ImageView\",\"backgroundRepeat\":false,\"reverse\":false,\"children\":[],\"image\":\"/img/poke-min/1.png\",\"id\":\"rowIcon\"},{\"bubbleParent\":true,\"rect\":{\"height\":27,\"y\":15,\"x\":70,\"width\":144},\"left\":10,\"top\":15,\"children\":[],\"keepScreenOn\":false,\"size\":{\"height\":27,\"y\":0,\"width\":144,\"x\":0},\"visible\":true,\"enabled\":true,\"text\":\"#001 Bulbasaur\",\"right\":10,\"textAlign\":\"left\",\"apiName\":\"Ti.UI.Label\",\"color\":\"#000\",\"backgroundRepeat\":false,\"font\":{\"fontSize\":20},\"id\":\"rowLabel\"}],\"id\":\"PokemonTableRow\",\"_events\":{\"click\":{}}},\"rowIcon\":{\"width\":50,\"animating\":false,\"height\":50,\"bubbleParent\":true,\"rect\":{\"height\":50,\"y\":5,\"x\":10,\"width\":50},\"left\":10,\"borderColor\":\"#444444\",\"paused\":false,\"keepScreenOn\":false,\"top\":5,\"size\":{\"height\":50,\"y\":0,\"width\":50,\"x\":0},\"visible\":true,\"enabled\":true,\"borderRadius\":25,\"apiName\":\"Ti.UI.ImageView\",\"backgroundRepeat\":false,\"reverse\":false,\"children\":[],\"image\":\"/img/poke-min/1.png\",\"id\":\"rowIcon\"},\"rowLabel\":{\"bubbleParent\":true,\"rect\":{\"height\":27,\"y\":15,\"x\":70,\"width\":144},\"left\":10,\"top\":15,\"children\":[],\"keepScreenOn\":false,\"size\":{\"height\":27,\"y\":0,\"width\":144,\"x\":0},\"visible\":true,\"enabled\":true,\"text\":\"#001 Bulbasaur\",\"right\":10,\"textAlign\":\"left\",\"apiName\":\"Ti.UI.Label\",\"color\":\"#000\",\"backgroundRepeat\":false,\"font\":{\"fontSize\":20},\"id\":\"rowLabel\"}},\"__proxyProperties\":{},\"UI\":{},\"__controllerPath\":\"PokemonTableRow\",\"args\":{\"abilities\":[{\"id\":65,\"identifier\":\"Overgrow\",\"description\":\"Powers up Grass-type moves\\r\\nwhen the Pokémon is in trouble.\"},{\"id\":34,\"identifier\":\"Chlorophyll\",\"description\":\"Boosts the Pokémon’s\\r\\nSpeed stat in sunshine.\"}],\"baseStats\":{\"hp\":{\"base\":45,\"maxBase\":255,\"identifier\":\"Hp\",\"id\":1},\"attack\":{\"base\":49,\"maxBase\":190,\"identifier\":\"Attack\",\"id\":2},\"defense\":{\"base\":49,\"maxBase\":190,\"identifier\":\"Defense\",\"id\":3},\"spcAttack\":{\"base\":65,\"maxBase\":190,\"identifier\":\"Sp.Atk\",\"id\":4},\"spcDefense\":{\"base\":65,\"maxBase\":190,\"identifier\":\"Sp.Def\",\"id\":5},\"speed\":{\"base\":45,\"maxBase\":190,\"identifier\":\"Speed\",\"id\":6}},\"description\":\"For some time after its birth, it grows by gaining\\r nourishment from the seed on its back.\",\"evolutions\":[1,2,3],\"id\":1,\"identifier\":\"Bulbasaur\",\"moves\":[{\"move_id\":33,\"pokemon_move_method_id\":1,\"level\":1,\"identifier\":\"Tackle\",\"type_id\":1,\"power\":50,\"accuracy\":100,\"damage_class_id\":2,\"item_id\":null,\"item_name\":null},{\"move_id\":45,\"pokemon_move_method_id\":1,\"level\":3,\"identifier\":\"Growl\",\"type_id\":1,\"power\":null,\"accuracy\":100,\"damage_class_id\":1,\"item_id\":null,\"item_name\":null},{\"move_id\":73,\"pokemon_move_method_id\":1,\"level\":7,\"identifier\":\"Leech-seed\",\"type_id\":12,\"power\":null,\"accuracy\":90,\"damage_class_id\":1,\"item_id\":null,\"item_name\":null},{\"move_id\":22,\"pokemon_move_method_id\":1,\"level\":9,\"identifier\":\"Vine-whip\",\"type_id\":12,\"power\":45,\"accuracy\":100,\"damage_class_id\":2,\"item_id\":null,\"item_name\":null},{\"move_id\":77,\"pokemon_move_method_id\":1,\"level\":13,\"identifier\":\"Poison-powder\",\"type_id\":4,\"power\":null,\"accuracy\":75,\"damage_class_id\":1,\"item_id\":null,\"item_name\":null},{\"move_id\":79,\"pokemon_move_method_id\":1,\"level\":13,\"identifier\":\"Sleep-powder\",\"type_id\":12,\"power\":null,\"accuracy\":75,\"damage_class_id\":1,\"item_id\":null,\"item_name\":null},{\"move_id\":36,\"pokemon_move_method_id\":1,\"level\":15,\"identifier\":\"Take-down\",\"type_id\":1,\"power\":90,\"accuracy\":85,\"damage_class_id\":2,\"item_id\":null,\"item_name\":null},{\"move_id\":75,\"pokemon_move_method_id\":1,\"level\":19,\"identifier\":\"Razor-le\n",
+			"settings":
+			{
+				"buffer_size": 4100,
+				"line_ending": "Unix",
+				"name": "{"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 75.0,
+		"selected_items":
+		[
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"be",
+				"Javascript Beautify"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"beay",
+				"Javascript Beautify"
+			],
+			[
+				"",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"coff",
+				"Coffee: Compile File"
+			],
+			[
+				"coffee",
+				"Preferences: Better CoffeeScript Settings – Default"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 174.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/lib/pokedex.js",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/pokedexTest.js",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/PokedexAppTitaniumTest.sublime-workspace",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/lib/utils.js",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_moves.sql",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_moves.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/moves.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/lib/pokedex-original.js",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/lib-test/alloy.js",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/moves.sql",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/ability_flavor_text.sql",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_species_flavor_text.sql",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/types.sql",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_color_names.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_colors.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_evolution.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_evolution.json",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_species.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_species.json",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_stats.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/pokemon_types.sql",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/pokedex.html",
+		"/home/alisson/Trabalho/PokedexAppAngular/www/js/util.js",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/types.csv",
+		"/home/alisson/Trabalho/PokedexAppTitanium/data/create-tables.sql",
+		"/home/alisson/Trabalho/PokedexAppTitanium/.gitignore",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/bower.json",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/lib-app/utils.js",
+		"/home/alisson/Trabalho/material-aulas/docs/unipar-cianorte/2015/aulas-dadas/tecinfo-2014-desen-web.txt",
+		"/home/alisson/Trabalho/material-aulas/docs/unipar-cianorte/2015/aulas-dadas/tecinfo-2013-servicos-internet.txt",
+		"/home/alisson/Trabalho/material-aulas/docs/unipar-cianorte/2015/aulas-dadas/tecinfo-2015-interfaces.txt",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/pagina.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/css/pagina.css",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/github-api.txt",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/offline/user-chiquitto-repos.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/offline/repos-AulasUnipar2015.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/offline/user-chiquitto.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/offline/users-chiqui.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo2/offline/repositorio.php",
+		"/home/alisson/Downloads/default.css",
+		"/home/alisson/.cache/.fr-xXi02E/sistema-venda/usuarios-cadastrar.php",
+		"/media/9996-2813/data/AulasUnipar2015/tads-1serie-interfaces/css/script/html-boxmodel-a.html",
+		"/media/9996-2813/data/AulasUnipar2015/tads-1serie-interfaces/css/script/css/boxmodel-a.css",
+		"/media/9996-2813/data/AulasUnipar2015/tads-1serie-interfaces/css/script/html-boxmodel-b.html",
+		"/media/9996-2813/data/AulasUnipar2015/tads-1serie-interfaces/css/script/css/html-boxmodel-a.css",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-1serie-interfaces/css/script/html-basico.html",
+		"/media/9996-2813/data/AulasUnipar2015/tads-1serie-interfaces/css/script/html-boxmodel1.html",
+		"/media/9996-2813/data/AulasUnipar2015/tads-1serie-interfaces/css/script/html-texto-a.html",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-1serie-interfaces/css/script/html-texto-a.html",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/cola.txt",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/pagina.html",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo1/exemplo1.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo1/script.js",
+		"/media/9996-2813/data/AulasUnipar2015/tads-3serie-servicos-internet/ajax/cola.txt",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/exemplo1/produtos.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/carrega-produtos.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/busca-produto.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/carrega-produto.php",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/test/lib/pokedex-original.js",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/test/lib/pokedex.js",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-3serie-servicos-internet/ajax/js/busca.js",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-1serie-interfaces/css/ativ1/pagina.css",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-1serie-interfaces/css/ativ1/pagina.html",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-1serie-interfaces/css/ativ2/atividade1.txt",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-1serie-interfaces/css/ativ1/atividade1.txt",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-1serie-interfaces/css/ativ1/texto.txt",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/test/pokedexTest.js",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/.gitignore",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/test/pokedex.html",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/test/require.js",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/test/lib/require.js",
+		"/home/alisson/Trabalho/PokedexAppTitanium/test/lib/pokedex-data.js",
+		"/home/alisson/.titanium/config.json",
+		"/home/alisson/Downloads/android-studio/Install-Linux-tar.txt",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/tiapp.xml",
+		"/home/alisson/Trabalho/PokedexAppAngular/www/js/data.js",
+		"/home/alisson/Trabalho/PokedexAppAngular/www/js/php.js",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/app/lib/pokedex.js",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/manifest",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitaniumTest/lib/pokedex.js",
+		"/home/alisson/Titanium_Studio_Workspace/rssReader/app/controllers/completo.js",
+		"/home/alisson/Titanium_Studio_Workspace/rssReader/app/controllers/rowTemplate.js",
+		"/home/alisson/Titanium_Studio_Workspace/rssReader/app/controllers/index.js",
+		"/home/alisson/Titanium_Studio_Workspace/rssReader/app/controllers/detalhe.js",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/app/lib/pokedex (copy).js",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/app/lib/pokedex.coffee",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/app/lib/pokedex-data.js",
+		"/home/alisson/.config/sublime-text-2/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
+		"/home/alisson/.config/sublime-text-2/Packages/User/CoffeeScript.sublime-settings",
+		"/home/alisson/Appcelerator_Studio_Workspace/PokedexAppTitanium/app/lib/underscore.js",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/lib/funcoes.php",
+		"/home/alisson/Downloads/genymotion-2.5.2_x64.bin",
+		"/home/alisson/Desktop/pktipo.css",
+		"/home/alisson/Trabalho/PokedexAppAngular/www/css/tipos.css",
+		"/home/alisson/Trabalho/PokedexAppAngular/www/js/type_efficacy.js",
+		"/home/alisson/Trabalho/PokedexAppAngular/www/js/pokemon_species.csv.js",
+		"/home/alisson/Downloads/Appcelerator_Studio/hs_err_pid10452.log",
+		"/home/alisson/Downloads/Appcelerator_Studio/TitaniumStudio360 (copy).sh",
+		"/home/alisson/Titanium_Studio_Workspace/PokedexApp/.gitignore",
+		"/home/alisson/Downloads/Appcelerator_Studio/TitaniumStudio360.sh",
+		"/home/alisson/.cache/.fr-OEO17U/lg_tv.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/PHP-LG-SmartTV/example.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/PHP-LG-SmartTV/index.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/PHP-LG-SmartTV/smartTV.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/PHP-LG-SmartTV/webInterface.php",
+		"/home/alisson/Dropbox/pcc/git/pesquisa/pos-defesa-dissertacao/paginas-coloridas.txt",
+		"/home/alisson/Trabalho/angular-js/livro-antologia/todo/todo.html",
+		"/home/alisson/Downloads/Bradesco_12072015_154210.csv",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/docs/vendas.sql",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/clientes-cadastrar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/categorias.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/categorias-apagar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/categorias-cadastrar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/categorias-editar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/clientes.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/clientes-apagar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/clientes-editar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/config.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/index.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/login.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/logout.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/nav.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/produtos.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/produtos-cadastrar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/produtos-editar.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/protege.php",
+		"/home/alisson/Trabalho/AulasUnipar2015/tads-2serie-aplicacoes-web/sistema-venda/rel1.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"		+",
+			" '",
+			"stat_id",
+			"Utils.mt_rand(1, 38) * 5",
+			"2,3,45",
+			"2,1,73",
+			"abilities",
+			"",
+			"#",
+			"pokedexData.type",
+			"Utils",
+			"th",
+			"form",
+			"pokedexData",
+			"StatBaseHp",
+			"types",
+			"sdk",
+			"abilitie",
+			"Abilitie",
+			"abilitie",
+			"abiliti",
+			"description",
+			"world",
+			"_",
+			"mt_rand",
+			"exports",
+			"_",
+			"border-color",
+			"(\\#[0-9a-f]{6})",
+			";",
+			"}",
+			"(\\.pktipo[0-9]{1,2})",
+			"\\.pktipo\\-([0-9]{1,2})",
+			"\\",
+			"\\smarty{}",
+			"\\cvl{}",
+			"\\symplescvl{}",
+			"\\symplessmarty{}",
+			"$this->session",
+			"\"([0-9]+)\"",
+			"identifier: '([a-z]+)'",
+			"\"([0-9]+)\"",
+			"StatBaseSpcDefense",
+			"StatBaseSpcAttack",
+			"StatBaseDefense",
+			"StatBasDefense",
+			"StatBaseDefense",
+			"StatBaseAttack",
+			"StatBaseHp",
+			"“",
+			"”",
+			"allow",
+			"seke 2014",
+			"apendicea",
+			"apendice",
+			"UTF-8",
+			"encoding=UTF-8",
+			"categoria",
+			"cliente",
+			"[\\n]+",
+			"[\\n+]",
+			"\\n\\n",
+			"\\%.*",
+			"CTLmax_names_forced_etal",
+			"et.al",
+			"nameptr #1",
+			"nameptr",
+			"url",
+			"figure",
+			"tabular",
+			"table",
+			"length",
+			"height",
+			"line",
+			"height",
+			"length",
+			"height",
+			"line",
+			"length",
+			"qvt",
+			"figure",
+			"%",
+			"% ",
+			"title",
+			"http",
+			"session_start",
+			"appendix",
+			"Last access",
+			"class=\"(.+?)\"",
+			"class=\"(.+)\"",
+			"<label",
+			"number_format",
+			"myarray",
+			"MY_VALUE",
+			"myvalue",
+			"variáveis",
+			"dissertacao1",
+			"CVL",
+			"SMarty",
+			"CVL",
+			"SMarty",
+			"Com",
+			"RoboMóvel",
+			"LPS",
+			"UrnaEletronicaHTML5",
+			"clipPath42",
+			"DESIGN_TIME",
+			"user",
+			"aprova",
+			"itana",
+			"`vendas`.",
+			"req",
+			"requirement",
+			"enumerate",
+			"includegraphics",
+			"pdf",
+			"img-marca",
+			"getMateriaOriginal",
+			"getConnPortais",
+			"format.book",
+			"dispo",
+			"UrlLeft",
+			"url",
+			"em ",
+			"exampleInputPassword1",
+			"div",
+			"CVLExecutionManager",
+			"carregarSucesso"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			" ",
+			"Util.mt_rand",
+			"borderColor",
+			"\"$1\"",
+			",",
+			"},",
+			"\"$1\":",
+			"\"$1\"",
+			".pktipo$1",
+			"SMarty",
+			"CVL",
+			"SyMPLES-CVL",
+			"SyMPLES-SMarty",
+			"$1",
+			"identifier: '$1', identifierAbbr: '$1'",
+			"$1",
+			"\"",
+			"\\n",
+			"",
+			"class=\"\"",
+			"<label class=\"control-label\"",
+			"LP",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 4100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 42.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.coffee_compile_output":
+	{
+		"height": 142.0
+	},
+	"replace":
+	{
+		"height": 84.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 169.0,
+	"status_bar_visible": true
+}

@@ -2,13 +2,17 @@
 	layout: 'horizontal',
 },
 "Label": {
-	color: '#000000'
+	// backgroundColor: 'red',
+	color: '#000000',
+	font: {
+		fontSize: 12,
+	},
 },
 "#lvLabel": {
 	width: '12%',
 },
 "#moveLabel": {
-	width: '27%',
+	width: '37%',
 },
 "#typeLabel": {
 	width: '22%',
@@ -16,10 +20,17 @@
 "#classLabel": {
 	width: '10%',
 },
+"#classLabelContainer": {
+	left: 5,
+	right: 5,
+},
+'#classPicture': {
+	height: Titanium.UI.SIZE,
+	width: Titanium.UI.FILL,
+},
 "#powerLabel": {
 	width: '9%',
 },
 "#accLabel": {
-	backgroundColor: 'red',
-	width: '20%',
+	width: '9%',
 },
