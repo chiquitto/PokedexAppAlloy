@@ -1,5 +1,7 @@
 <Alloy>
-	<Window class="container">
-		<Widget typeShow="1" src="PokemonTableView"/>
-	</Window>
+	<NavigationWindow platform="ios" id="navWin">
+		<Require src="PokemonList" />
+	</NavigationWindow>
+	
+	<Require platform="android" src="PokemonList" id="masterCtrl" />
 </Alloy>

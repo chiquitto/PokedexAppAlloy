@@ -58,11 +58,12 @@ Ti.App.addEventListener('pokemonDetail:open', function(v) {
 		pokeId : v.pokeId,
 	}).getView();
 
-	if (OS_IOS || OS_MOBILEWEB) {
-		$.navgroup.open(newDetailController);
+	newDetailController.open();
+	/*if (OS_IOS || OS_MOBILEWEB) {
+		$.navWin.open(newDetailController);
 	} else {
 		newDetailController.open();
-	}
+	}*/
 	
 	if (detailController != null) {
 		detailController.close();

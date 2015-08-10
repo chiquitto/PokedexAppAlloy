@@ -1,1 +1,0 @@
-/home/alisson/Trabalho/PokedexAppAngular/www/js/data.js

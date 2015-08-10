@@ -1,3 +1,11 @@
-$.index.setTitle('Pokemon list');
+(function constructor(args) {
 
-$.index.open();
+	'use strict';
+
+	if (OS_IOS) {
+		$.navWin.open();
+	} else if (OS_MOBILEWEB) {
+		$.index.open();
+	}
+
+})(arguments[0] || {}); 

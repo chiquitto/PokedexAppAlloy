@@ -1,8 +1,8 @@
-#appname: PokedexAppTitanium
-#publisher: alisson
-#url: http://
-#image: appicon.png
-#appid: com.PokedexAppTitanium
-#desc: undefined
-#type: mobile
-#guid: 4c79fc98-5342-4a6f-9222-9241fad437e6
+#appname:PokedexAppTitanium
+#publisher:alisson
+#url:http://
+#image:appicon.png
+#appid:com.PokedexApp
+#desc:undefined
+#type:ipad
+#guid:4c79fc98-5342-4a6f-9222-9241fad437e6
