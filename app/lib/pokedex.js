@@ -27,7 +27,7 @@ var Pokedex = function() {
 
 		while (dados.isValidRow()) {
 			var abilitie = new Abilitie(dados.fieldByName('ability_id'), dados.fieldByName('name'));
-			abilitie.setDescription(dados.fieldByName('flavor_text'));
+			abilitie.setDescription(dados.fieldByName('flavor_text').replace(/[\n\r]+/g, ' '));
 			
 			abilities.push(abilitie);
 			dados.next();
@@ -183,7 +183,7 @@ var Abilitie = function(idArg, identifierArg) {
 	};
 
 	this.init();
-}
+};
 
 var Pokemon = function(idArg, identifierArg) {
 	this.abilities = null;
@@ -467,7 +467,7 @@ var StatBaseHp = function() {
 	this.maxBase = 255;
 	this.id = 1;
 	this.identifier = 'Hp';
-}
+};
 // StatBaseHp.prototype = StatBase.prototype;
 // StatBaseHp.prototype.constructor = StatBaseHp;
 
@@ -476,7 +476,7 @@ var StatBaseAttack = function() {
 
 	this.id = 2;
 	this.identifier = 'Attack';
-}
+};
 // StatBaseAttack.prototype = StatBase.prototype;
 // StatBaseAttack.prototype.constructor = StatBaseAttack;
 
@@ -485,7 +485,7 @@ var StatBaseDefense = function() {
 
 	this.id = 3;
 	this.identifier = 'Defense';
-}
+};
 // StatBaseDefense.prototype = StatBase.prototype;
 // StatBaseDefense.prototype.constructor = StatBaseDefense;
 
@@ -494,7 +494,7 @@ var StatBaseSpcAttack = function() {
 
 	this.id = 4;
 	this.identifier = 'Sp.Atk';
-}
+};
 // StatBaseSpcAttack.prototype = StatBase.prototype;
 // StatBaseSpcAttack.prototype.constructor = StatBaseSpcAttack;
 
@@ -503,7 +503,7 @@ var StatBaseSpcDefense = function() {
 
 	this.id = 5;
 	this.identifier = 'Sp.Def';
-}
+};
 // StatBaseSpcDefense.prototype = StatBase.prototype;
 // StatBaseSpcDefense.prototype.constructor = StatBaseSpcDefense;
 
@@ -512,7 +512,7 @@ var StatBaseSpeed = function() {
 
 	this.id = 6;
 	this.identifier = 'Speed';
-}
+};
 // StatBaseSpeed.prototype = StatBase.prototype;
 // StatBaseSpeed.prototype.constructor = StatBaseSpeed;
 

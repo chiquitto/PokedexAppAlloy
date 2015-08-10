@@ -12,6 +12,8 @@ function init() {
 }
 
 function initDetail() {
+	'use strict';
+
 	var title = '#' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + ' ' + pokemon.getIdentifier();
 
 	$.pkPicture.setImage('/img/poke/' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + '.png');
@@ -21,11 +23,20 @@ function initDetail() {
 	var abilities = pokemon.getAbilities();
 	var i;
 
+	Ti.API.log(JSON.stringify(abilities));
+
+	var label;
 	for (i in abilities) {
-		var label = $.UI.create("Label", {
+		label = $.UI.create("Label", {
 			classes : ['pkAbilitie'],
-			html : '<strong>' + abilities[i].getIdentifier() + '</strong>: ' + abilities[i].getDescription(),
 		});
+
+		if (OS_IOS) {
+			label.setText(abilities[i].getIdentifier() + ': ' + abilities[i].getDescription());
+		} else if (OS_MOBILEWEB) {
+			label.setHtml('<strong>' + abilities[i].getIdentifier() + '</strong>: ' + abilities[i].getDescription());
+		}
+
 		$.pkAbilities.add(label);
 	}
 
@@ -34,10 +45,8 @@ function initDetail() {
 
 init();
 
-
-
 /*
-Ti.App.addEventListener('pokemonDetail:selected', function(v) {
-  pokemon = v;
-});
+ Ti.App.addEventListener('pokemonDetail:selected', function(v) {
+ pokemon = v;
+ });
  */
