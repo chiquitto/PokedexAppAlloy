@@ -3,7 +3,8 @@
 	'use strict';
 
 	if (OS_IOS) {
-		$.navWin.open();
+		Alloy.Globals.navWin = $.navWin; 
+		Alloy.Globals.navWin.open();
 	} else if (OS_MOBILEWEB) {
 		$.index.open();
 	}
