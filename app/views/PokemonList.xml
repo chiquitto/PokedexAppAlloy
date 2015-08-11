@@ -1,7 +1,5 @@
 <Alloy>
 	<Window class="container">
-		<!-- <Widget typeShow="1" src="PokemonTableView"/> -->
-		
-		<TableView id="PokemonTable"></TableView>
+		<Widget typeShow="1" src="PokemonTableView"/>
 	</Window>
 </Alloy>

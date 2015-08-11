@@ -18,7 +18,10 @@ function initDetail() {
 
 	$.pkPicture.setImage('/img/poke/' + Alloy.Globals.utils.leadingZero(pokemon.getId(), 3) + '.png');
 	$.pkName.setText(title);
-	$.PokemonDetail.setTitle(title);
+
+	if (OS_ANDROID) {
+		$.PokemonDetail.setTitle(title);
+	}
 
 	var abilities = pokemon.getAbilities();
 	var i;

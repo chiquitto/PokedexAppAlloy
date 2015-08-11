@@ -16,6 +16,25 @@ if (args.typeShow == typeShowByEvolution) {
 	pokemons = Alloy.Globals.pokedex.getPokemons();
 }
 
+$.PokemonTable.addEventListener('click', function(e) {
+    var pokemon = pokemons[e.index];
+    
+    var newDetailController = Alloy.createController('PokemonDetail', {
+		pokeId : pokemon.getId(),
+	}).getView();
+
+	if (OS_IOS || OS_MOBILEWEB) {
+		Alloy.Globals.navWin.openWindow(newDetailController);
+	} else {
+		newDetailController.open();
+	}
+	
+	if (Alloy.Globals.windowCache.detailController != null) {
+		Alloy.Globals.windowCache.detailController.close();
+	}
+	Alloy.Globals.windowCache.detailController = newDetailController;
+});
+
 // var u = require('underscore')._;
 var tableData = _.map(pokemons, function(item, key) {
 	var row = Widget.createController('PokemonTableRow', {

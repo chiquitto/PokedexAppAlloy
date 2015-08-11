@@ -1,5 +1,5 @@
 <Alloy>
-	<TabGroup>
+	<TabGroup id="tabGroup">
 		<Tab id="tabBasic" title="Basic">
 			<Window id="window" class="container">
 				<ScrollView id="scrollView">
