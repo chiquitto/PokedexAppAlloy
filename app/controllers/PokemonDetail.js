@@ -5,6 +5,8 @@ var pokemon = Alloy.Globals.pokedex.getPokemon(args.pokeId);
 function init() {
 	initDetail();
 
+	initTabs();
+
 	$.PokemonDetailType.init(args);
 	$.PokemonDetailStat.init(args);
 	$.PokemonDetailEvolution.init(args);
@@ -44,6 +46,16 @@ function initDetail() {
 	}
 
 	$.pkDescription.setText(pokemon.getDescription());
+}
+
+function initTabs() {
+	if (OS_IOS) {
+		$.tabGroup.tabs[0].icon = 'tabIcon/home-7.png';
+		$.tabGroup.tabs[1].icon = 'tabIcon/filing-7.png';
+		$.tabGroup.tabs[2].icon = 'tabIcon/dumbbell-7.png';
+		$.tabGroup.tabs[3].icon = 'tabIcon/electric-7.png';
+		$.tabGroup.tabs[4].icon = 'tabIcon/list-simple-7.png';
+	}
 }
 
 init();
