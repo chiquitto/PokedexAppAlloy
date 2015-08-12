@@ -34,9 +34,10 @@ height: Ti.UI.SIZE //
 },
 
 ".containerInner": {
+	layout:'vertical',
+	height: Titanium.UI.SIZE,
 	bottom: 10,
     left: 10,
-    layout: 'vertical',
     right: 10,
     top: 10
 },

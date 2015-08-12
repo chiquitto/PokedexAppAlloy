@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="weaknessesCell">
+		<Widget id="type" typeId="1" src="TypeLabel"/>
+		<!-- <Label id="label">1x</Label> -->
+	</View>
+</Alloy>

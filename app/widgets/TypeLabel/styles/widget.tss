@@ -1,7 +1,7 @@
 "View": {
     borderRadius: 5,
     borderWidth: 2,
-    height: Titanium.UI.SIZE,
+    height: 25,
     width: Titanium.UI.FILL
 },
 

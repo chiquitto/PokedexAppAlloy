@@ -1,9 +1,9 @@
 "#scrollView": {
-    height: Titanium.UI.SIZE,
-    scrollType: 'vertical',
-    showVerticalScrollIndicator: true,
-    showHorizontalScrollIndicator: false,
-    width: Titanium.UI.FILL
+	//backgroundColor:'red',
+	contentHeight: Ti.UI.SIZE,  // new
+    contentWidth: Ti.UI.FILL, // new
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL,
 },
 
 '#pkPicture': {
@@ -14,6 +14,7 @@
     font: {
         fontSize: 20
     },
+    height: Titanium.UI.SIZE,
     textAlign: "left",
     width: Titanium.UI.FILL
 },

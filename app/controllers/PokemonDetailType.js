@@ -19,6 +19,14 @@ function generateTypeCell(typeId, classes) {
 }
 
 function generateWeaknessesCell(type, damageFactor, classes) {
+	/* var r = Alloy.createController('PokemonDetailTypeWeaknessesCell', {
+		type: type,
+		damageFactor: damageFactor,
+		classes: classes,
+	}).getView();
+	Ti.API.log(JSON.stringify(r));
+	return; */
+	
 	/*<View class="weaknessesCell">
 	 <Widget typeId="1" src="TypeLabel"/>
 	 <Label class="weaknessesCellLabel">1x</Label>

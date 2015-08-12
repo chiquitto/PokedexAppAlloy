@@ -4,8 +4,8 @@
     width: Titanium.UI.SIZE,
 },
 ".typeCell": {
-    // height: Titanium.UI.SIZE,
-    height: 30,
+    height: Titanium.UI.SIZE,
+    // height: 30,
     width: '32%',
 },
 ".typeCell2": {
@@ -13,6 +13,7 @@
 },
 
 "#weaknesses": {
+	height: Titanium.UI.SIZE,
     layout: 'horizontal',
 },
 ".weaknessesCell": {
@@ -27,5 +28,5 @@
     width: '31%',
 },
 ".weaknessesCellLabel": {
-    textAlign: 'center',
+	textAlign: 'center',
 },

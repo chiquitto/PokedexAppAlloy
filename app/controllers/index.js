@@ -1,7 +1,7 @@
 (function constructor(args) {
 
 	'use strict';
-
+	
 	var window;
 
 	if (OS_IOS) {

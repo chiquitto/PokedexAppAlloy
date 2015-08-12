@@ -28,7 +28,7 @@ function initDetail() {
 	var abilities = pokemon.getAbilities();
 	var i;
 
-	Ti.API.log(JSON.stringify(abilities));
+	//Ti.API.log(JSON.stringify(abilities));
 
 	var label;
 	for (i in abilities) {
