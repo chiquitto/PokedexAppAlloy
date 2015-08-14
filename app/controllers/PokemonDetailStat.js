@@ -17,6 +17,7 @@ function generateStatView(stat) {
 		overlayText: stat.getBase(),
 		titleText: stat.getIdentifier(),
 		src : 'com.leorbrenman.tigauge',
+		isAnimationOn: false,
 	});
 	view.add(widget.getView());
 	

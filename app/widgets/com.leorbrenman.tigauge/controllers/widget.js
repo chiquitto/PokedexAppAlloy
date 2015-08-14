@@ -1,5 +1,7 @@
 var _args = arguments[0] || {};
 
+//Ti.API.log(JSON.stringify(_args));
+
 var _percent="0";
 var _isAnimationOn = true;
 var defaultPercent = "50";
@@ -15,7 +17,13 @@ $.tiGaugeBGVw.height = _args.gaugeHeight || defaultGaugeHeight;
 $.tiGaugeMeterVw.height = _args.gaugeHeight || defaultGaugeHeight;
 $.tiGaugeTitleLbl.text = _args.titleText || null;
 $.tiGaugeTitleRightLbl.text = _args.titleRightText || null;
-_isAnimationOn = _args.isAnimationOn || true;
+
+//_isAnimationOn = _args.isAnimationOn || true;
+_isAnimationOn = (typeof _args.isAnimationOn === "boolean") ? _args.isAnimationOn : true;
+
+Ti.API.log(JSON.stringify(_args));
+var chiquitto = (typeof _args.chiquitto === "boolean") ? _args.chiquitto : true;
+Ti.API.log(JSON.stringify(chiquitto));
 
 $.setPercent = function (percent) {
 	_percent = percent;
