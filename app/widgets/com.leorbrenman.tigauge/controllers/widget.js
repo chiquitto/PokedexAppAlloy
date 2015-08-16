@@ -21,10 +21,6 @@ $.tiGaugeTitleRightLbl.text = _args.titleRightText || null;
 //_isAnimationOn = _args.isAnimationOn || true;
 _isAnimationOn = (typeof _args.isAnimationOn === "boolean") ? _args.isAnimationOn : true;
 
-Ti.API.log(JSON.stringify(_args));
-var chiquitto = (typeof _args.chiquitto === "boolean") ? _args.chiquitto : true;
-Ti.API.log(JSON.stringify(chiquitto));
-
 $.setPercent = function (percent) {
 	_percent = percent;
 	

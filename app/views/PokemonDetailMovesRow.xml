@@ -1,6 +1,6 @@
 <Alloy>
-	<TableViewRow className="move" class="rowClass">
-		<Label id="lvLabel"/>
+	<TableViewRow className="move" id="rowClass">
+		<Label id="lvLabel"></Label>
 		<Label id="moveLabel"/>
 		<View id="typeLabel"/>
 		<View id="classLabel">

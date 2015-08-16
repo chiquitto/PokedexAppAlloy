@@ -1,36 +1,53 @@
-"TableViewRow": {
-	layout: 'horizontal',
-},
 "Label": {
-	// backgroundColor: 'red',
 	color: '#000000',
 	font: {
-		fontSize: 12,
+		fontSize: 12
 	},
+	height: Titanium.UI.SIZE
+},
+"View": {
+	height: Titanium.UI.SIZE
+},
+"#rowClass": {
+	height: Titanium.UI.SIZE,
+	width: Titanium.UI.FILL
 },
 "#lvLabel": {
-	width: '12%',
+	// backgroundColor: 'red',
+	left: 0,
+	width: 30
 },
 "#moveLabel": {
-	width: '37%',
+	// backgroundColor: 'blue',
+	left: 31,
+	right: 161
+	// width: 107
 },
 "#typeLabel": {
-	width: '22%',
+	// backgroundColor: 'red',
+	right: 94,
+	width: 66
 },
 "#classLabel": {
-	width: '10%',
+	// backgroundColor: 'blue',
+	right: 63,
+	width: 30
 },
 "#classLabelContainer": {
-	left: 5,
-	right: 5,
+	left: 0,
+	right: 0
 },
 '#classPicture': {
 	height: Titanium.UI.SIZE,
-	width: Titanium.UI.FILL,
+	width: Titanium.UI.FILL
 },
 "#powerLabel": {
-	width: '9%',
+	// backgroundColor: 'red',
+	right: 34,
+	width: 27
 },
 "#accLabel": {
-	width: '9%',
+	// backgroundColor: 'blue',
+	right: 0,
+	width: 33
 },

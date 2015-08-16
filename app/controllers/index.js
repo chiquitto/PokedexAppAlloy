@@ -9,7 +9,7 @@
 		Alloy.Globals.navWin.open();
 		
 		window = Alloy.Globals.navWin.getWindow();
-	} else if (OS_MOBILEWEB) {
+	} else {
 		$.index.open();
 		
 		window = $.index;

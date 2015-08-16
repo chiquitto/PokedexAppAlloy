@@ -1,6 +1,6 @@
 "#PokemonMovesHeader": {
 	height: Titanium.UI.SIZE,
-	layout: 'horizontal',
+	// layout: 'horizontal',
 },
 'Label': {
 	color: '#000000',
@@ -9,25 +9,33 @@
 	},
 },
 "#lvLabel": {
-	width: '12%',
+	// backgroundColor: 'red',
+	left: 0,
+	width: 30,
 },
 "#moveLabel": {
-	width: '37%',
+	// backgroundColor: 'blue',
+	left: 31,
+	right: 161,
 },
 "#typeLabel": {
+	// backgroundColor: 'red',
+	right: 94,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-	width: '22%',
+	width: 66,
 },
 "#classLabel": {
-	width: '10%',
+	// backgroundColor: 'blue',
+	right: 63,
+	width: 30,
 },
 "#powerLabel": {
-	width: '9%',
+	// backgroundColor: 'red',
+	right: 34,
+	width: 27,
 },
 "#accLabel": {
-	width: '9%',
-},
-
-"TableView": {
-	
+	// backgroundColor: 'blue',
+	right: 0,
+	width: 33,
 },
