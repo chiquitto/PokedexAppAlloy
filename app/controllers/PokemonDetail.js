@@ -22,7 +22,7 @@ function initDetail() {
 	$.pkName.setText(title);
 
 	if (OS_ANDROID) {
-		$.PokemonDetail.setTitle(title);
+		$.tabGroup.setTitle(title);
 	}
 
 	var abilities = pokemon.getAbilities();
@@ -38,7 +38,7 @@ function initDetail() {
 
 		if (OS_IOS) {
 			label.setText(abilities[i].getIdentifier() + ': ' + abilities[i].getDescription());
-		} else if (OS_MOBILEWEB) {
+		} else {
 			label.setHtml('<strong>' + abilities[i].getIdentifier() + '</strong>: ' + abilities[i].getDescription());
 		}
 

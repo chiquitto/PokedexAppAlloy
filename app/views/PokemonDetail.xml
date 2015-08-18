@@ -1,7 +1,7 @@
 <Alloy>
 	<TabGroup id="tabGroup">
 		<Tab id="tabBasic" title="Basic">
-			<Window id="window" class="container">
+			<Window id="winBasic" class="container">
 				<ScrollView id="scrollView">
 					<View class="containerInner">
 						<ImageView id="pkPicture" />

@@ -3,5 +3,5 @@
 		<Require src="PokemonList" />
 	</NavigationWindow>
 	
-	<Require platform="android" src="PokemonList" />
+	<Require platform="android" src="PokemonList" id="masterCtrl" />
 </Alloy>
