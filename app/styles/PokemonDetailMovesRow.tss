@@ -24,7 +24,7 @@
 	// width: 107
 },
 "#typeLabel": {
-	// backgroundColor: 'red', 
+	// backgroundColor: 'red',
 	right: 94,
 	width: 66
 },
